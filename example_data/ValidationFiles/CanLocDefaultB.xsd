@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 (x64) (http://www.altova.com) by OasisLMF (Oasis Palm Tree Ltd.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="root">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="rec" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="ROW_ID"/>
+						<xs:attribute name="ACCNTNUM"/>
+						<xs:attribute name="RISKNUM"/>
+						<xs:attribute name="BLDGSCHEME"/>
+						<xs:attribute name="BLDGCODE"/>
+						<xs:attribute name="OCCSCHEME"/>
+						<xs:attribute name="OCCCODE"/>
+						<xs:attribute name="YEARBUILT"/>
+						<xs:attribute name="NUMSTORIES"/>
+						<xs:attribute name="NUMRISKS"/>
+						<xs:attribute name="POSTALCODE"/>
+						<xs:attribute name="COUNTYCODE"/>
+						<xs:attribute name="STATECODE"/>
+						<xs:attribute name="MODEL1"/>
+						<xs:attribute name="MODEL2"/>
+						<xs:attribute name="MODEL3"/>
+						<xs:attribute name="MODEL4"/>
+						<xs:attribute name="MODEL5"/>
+						<xs:attribute name="COV1TIV"/>
+						<xs:attribute name="COV2TIV"/>
+						<xs:attribute name="COV3TIV"/>
+						<xs:attribute name="COV4TIV"/>
+						<xs:attribute name="COV1DED"/>
+						<xs:attribute name="COV2DED"/>
+						<xs:attribute name="COV3DED"/>
+						<xs:attribute name="COV4DED"/>
+						<xs:attribute name="COV1LIM"/>
+						<xs:attribute name="COV2LIM"/>
+						<xs:attribute name="COV3LIM"/>
+						<xs:attribute name="COV4LIM"/>
+						<xs:attribute name="COMBDED"/>
+						<xs:attribute name="COMBLIM"/>
+						<xs:attribute name="SITEDED"/>
+						<xs:attribute name="SITELIM"/>
+						<xs:attribute name="SUBLIMGROUP"/>
+						<xs:attribute name="SUBLIMDED"/>
+						<xs:attribute name="SUBLIMLIM"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

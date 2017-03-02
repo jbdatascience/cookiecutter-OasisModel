@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2015r4 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="xslt"/>
+		<structure>
+			<children>
+				<component name="substitute-missing" library="core" uid="13" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="30"/>
+					</sources>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="444" lty="386" rbx="558" rby="442"/>
+				</component>
+				<component name="constant" library="core" uid="15" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="343" lty="119" rbx="381" rby="137"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="CanAccExampleA" library="xml" uid="18" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="666" lty="56" rbx="910" rby="256"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" inpkey="83" expanded="1">
+										<entry name="rec" inpkey="84" expanded="1">
+											<entry name="ACCNTNUM" type="attribute" inpkey="85"/>
+											<entry name="POLICYNUM" type="attribute" inpkey="86"/>
+											<entry name="EXCESS" type="attribute" inpkey="87"/>
+											<entry name="LIMIT" type="attribute" inpkey="88"/>
+											<entry name="SHARE" type="attribute" inpkey="89"/>
+											<entry name="BLANDED" type="attribute" inpkey="90"/>
+											<entry name="MINDED" type="attribute" inpkey="91"/>
+											<entry name="MAXDED" type="attribute" inpkey="92"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\CanAccExampleA.xsd" outputinstance="..\ValidationFiles\CanAccExampleA.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="substitute-missing" library="core" uid="7" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+						<datapoint pos="1" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="444" lty="56" rbx="558" rby="112"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="8" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="14"/>
+						<datapoint pos="1" key="15"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="444" lty="111" rbx="558" rby="167"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="9" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="17"/>
+						<datapoint pos="1" key="18"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="444" lty="166" rbx="558" rby="222"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="10" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="20"/>
+						<datapoint pos="1" key="21"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="22"/>
+					</targets>
+					<view ltx="444" lty="221" rbx="558" rby="277"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="11" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="23"/>
+						<datapoint pos="1" key="24"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="444" lty="276" rbx="558" rby="332"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="12" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="26"/>
+						<datapoint pos="1" key="27"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="444" lty="331" rbx="558" rby="387"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="14" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="444" lty="441" rbx="558" rby="497"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="16" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="9"/>
+						<datapoint pos="1" key="7"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="444" lty="496" rbx="558" rby="552"/>
+				</component>
+				<component name="SourceAccExample" library="xml" uid="17" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-1" lty="54" rbx="253" rby="254"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" outkey="93" expanded="1">
+										<entry name="rec" outkey="94" expanded="1">
+											<entry name="ACCNTNUM" type="attribute" outkey="95"/>
+											<entry name="POLICYNUM" type="attribute" outkey="96"/>
+											<entry name="EXCESS" type="attribute" outkey="97"/>
+											<entry name="LIMIT" type="attribute" outkey="98"/>
+											<entry name="SHARE" type="attribute" outkey="99"/>
+											<entry name="BLANDED" type="attribute" outkey="100"/>
+											<entry name="MINDED" type="attribute" outkey="101"/>
+											<entry name="MAXDED" type="attribute" outkey="102"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\SourceAccExample.xsd" outputinstance="..\ValidationFiles\SourceAccExample.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="91" edgekey="103"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="12" edgekey="54"/>
+							<edge vertexkey="15" edgekey="55"/>
+							<edge vertexkey="18" edgekey="56"/>
+							<edge vertexkey="21" edgekey="57"/>
+							<edge vertexkey="24" edgekey="58"/>
+							<edge vertexkey="27" edgekey="59"/>
+							<edge vertexkey="30" edgekey="60"/>
+							<edge vertexkey="2" edgekey="61"/>
+							<edge vertexkey="7" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="92" edgekey="104"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="85" edgekey="105"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="86" edgekey="106"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="87" edgekey="107"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="88" edgekey="108"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="89" edgekey="109"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="90" edgekey="110"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="93">
+						<edges>
+							<edge vertexkey="83" edgekey="111"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="94">
+						<edges>
+							<edge vertexkey="84" edgekey="112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="11" edgekey="113"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="96">
+						<edges>
+							<edge vertexkey="14" edgekey="114"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="97">
+						<edges>
+							<edge vertexkey="17" edgekey="115"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="20" edgekey="116"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="99">
+						<edges>
+							<edge vertexkey="23" edgekey="117"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="100">
+						<edges>
+							<edge vertexkey="26" edgekey="118"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="1" edgekey="119"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="102">
+						<edges>
+							<edge vertexkey="9" edgekey="120"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

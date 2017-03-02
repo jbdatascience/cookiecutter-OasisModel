@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 (x64) (http://www.altova.com) by OasisLMF (Oasis Palm Tree Ltd.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="rec" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="ROW_ID"/>
+						<xs:attribute name="ACCNTNUM" type="xs:string"/>
+						<xs:attribute name="POLICYNUM" type="xs:string"/>
+						<xs:attribute name="EXCESS" type="xs:string"/>
+						<xs:attribute name="LIMIT" type="xs:string"/>
+						<xs:attribute name="SHARE" type="xs:string"/>
+						<xs:attribute name="BLANDED" type="xs:string"/>
+						<xs:attribute name="MINDED" type="xs:string"/>
+						<xs:attribute name="MAXDED" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2015r4 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="xslt"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="182" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="19" lty="387" rbx="57" rby="405"/>
+					<data>
+						<constant value="7" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="183" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="19" lty="404" rbx="57" rby="422"/>
+					<data>
+						<constant value="4" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="greater" library="core" uid="194" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="853"/>
+						<datapoint pos="1" key="851"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="852"/>
+					</targets>
+					<view ltx="256" lty="280" rbx="319" rby="336"/>
+				</component>
+				<component name="constant" library="core" uid="191" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="857"/>
+					</targets>
+					<view ltx="377" lty="188" rbx="415" rby="206"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="195" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="862"/>
+						<datapoint pos="1" key="859"/>
+						<datapoint pos="2" key="947"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="860"/>
+					</targets>
+					<view ltx="496" lty="130" rbx="593" rby="206"/>
+				</component>
+				<component name="if-else" library="core" uid="196" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="866"/>
+						<datapoint pos="1" key="863"/>
+						<datapoint pos="2" key="948"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="864"/>
+					</targets>
+					<view ltx="496" lty="205" rbx="593" rby="281"/>
+				</component>
+				<component name="if-else" library="core" uid="197" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="870"/>
+						<datapoint pos="1" key="867"/>
+						<datapoint pos="2" key="869"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="868"/>
+					</targets>
+					<view ltx="496" lty="280" rbx="593" rby="356"/>
+				</component>
+				<component name="ModelLocExample" library="xml" uid="186" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="692" lty="-88" rbx="959" rby="368"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="rec" inpkey="871" expanded="1">
+											<entry name="ROW_ID" type="attribute" inpkey="872"/>
+											<entry name="BLDGSCHEME" type="attribute" inpkey="873"/>
+											<entry name="BLDGCODE" type="attribute" inpkey="874"/>
+											<entry name="OCCSCHEME" type="attribute" inpkey="875"/>
+											<entry name="OCCCODE" type="attribute" inpkey="876"/>
+											<entry name="YEARBUILT" type="attribute" inpkey="877"/>
+											<entry name="NUMSTORIES" type="attribute" inpkey="878"/>
+											<entry name="POSTALCODE" type="attribute" inpkey="879"/>
+											<entry name="COUNTYCODE" type="attribute" inpkey="880"/>
+											<entry name="STATECODE" type="attribute" inpkey="881"/>
+											<entry name="MODEL1" type="attribute" inpkey="882"/>
+											<entry name="MODEL2" type="attribute" inpkey="883"/>
+											<entry name="MODEL3" type="attribute" inpkey="884"/>
+											<entry name="MODEL4" type="attribute" inpkey="885"/>
+											<entry name="MODEL5" type="attribute" inpkey="886"/>
+											<entry name="COV1" type="attribute" inpkey="858"/>
+											<entry name="COV2" type="attribute" inpkey="887"/>
+											<entry name="COV3" type="attribute" inpkey="888"/>
+											<entry name="COV4" type="attribute" inpkey="889"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\ModelLocExample.xsd" outputinstance="..\ValidationFiles\ModelLocExample.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="greater" library="core" uid="188" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="839"/>
+						<datapoint pos="1" key="840"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="841"/>
+					</targets>
+					<view ltx="256" lty="55" rbx="319" rby="111"/>
+				</component>
+				<component name="if-else" library="core" uid="190" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="843"/>
+						<datapoint pos="1" key="854"/>
+						<datapoint pos="2" key="855"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="856"/>
+					</targets>
+					<view ltx="496" lty="55" rbx="593" rby="131"/>
+				</component>
+				<component name="CanLocExampleB" library="xml" uid="185" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-149" lty="-88" rbx="114" rby="565"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="rec" outkey="890" expanded="1">
+											<entry name="ROW_ID" type="attribute" outkey="891"/>
+											<entry name="BLDGSCHEME" type="attribute" outkey="892"/>
+											<entry name="BLDGCODE" type="attribute" outkey="893"/>
+											<entry name="OCCSCHEME" type="attribute" outkey="894"/>
+											<entry name="OCCCODE" type="attribute" outkey="895"/>
+											<entry name="YEARBUILT" type="attribute" outkey="896"/>
+											<entry name="NUMSTORIES" type="attribute" outkey="897"/>
+											<entry name="POSTALCODE" type="attribute" outkey="898"/>
+											<entry name="COUNTYCODE" type="attribute" outkey="899"/>
+											<entry name="STATECODE" type="attribute" outkey="900"/>
+											<entry name="MODEL1" type="attribute" outkey="901"/>
+											<entry name="MODEL2" type="attribute" outkey="902"/>
+											<entry name="MODEL3" type="attribute" outkey="903"/>
+											<entry name="MODEL4" type="attribute" outkey="904"/>
+											<entry name="MODEL5" type="attribute" outkey="905"/>
+											<entry name="COV1TIV" type="attribute" outkey="844"/>
+											<entry name="COV2TIV" type="attribute" outkey="906"/>
+											<entry name="COV3TIV" type="attribute" outkey="907"/>
+											<entry name="COV4TIV" type="attribute" outkey="908"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\CanLocExampleB.xsd" outputinstance="..\ValidationFiles\CanLocExampleB.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="greater" library="core" uid="192" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="847"/>
+						<datapoint pos="1" key="845"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="846"/>
+					</targets>
+					<view ltx="256" lty="130" rbx="319" rby="186"/>
+				</component>
+				<component name="greater" library="core" uid="193" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="850"/>
+						<datapoint pos="1" key="848"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="849"/>
+					</targets>
+					<view ltx="256" lty="205" rbx="319" rby="261"/>
+				</component>
+				<component name="constant" library="core" uid="189" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="842"/>
+					</targets>
+					<view ltx="148" lty="188" rbx="186" rby="206"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="841">
+						<edges>
+							<edge vertexkey="843" edgekey="909"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="842">
+						<edges>
+							<edge vertexkey="840" edgekey="910"/>
+							<edge vertexkey="855" edgekey="911"/>
+							<edge vertexkey="845" edgekey="912"/>
+							<edge vertexkey="848" edgekey="913"/>
+							<edge vertexkey="851" edgekey="914"/>
+							<edge vertexkey="869" edgekey="915"/>
+							<edge vertexkey="948" edgekey="949"/>
+							<edge vertexkey="947" edgekey="950"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="844">
+						<edges>
+							<edge vertexkey="839" edgekey="916"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="846">
+						<edges>
+							<edge vertexkey="862" edgekey="917"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="849">
+						<edges>
+							<edge vertexkey="866" edgekey="918"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="852">
+						<edges>
+							<edge vertexkey="870" edgekey="919"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="856">
+						<edges>
+							<edge vertexkey="858" edgekey="920"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="857">
+						<edges>
+							<edge vertexkey="854" edgekey="921"/>
+							<edge vertexkey="863" edgekey="922"/>
+							<edge vertexkey="859" edgekey="923"/>
+							<edge vertexkey="867" edgekey="924"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="860">
+						<edges>
+							<edge vertexkey="887" edgekey="925"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="864">
+						<edges>
+							<edge vertexkey="888" edgekey="926"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="868">
+						<edges>
+							<edge vertexkey="889" edgekey="927"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="890">
+						<edges>
+							<edge vertexkey="871" edgekey="928"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="891">
+						<edges>
+							<edge vertexkey="872" edgekey="929"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="892">
+						<edges>
+							<edge vertexkey="873" edgekey="930"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="893">
+						<edges>
+							<edge vertexkey="874" edgekey="931"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="894">
+						<edges>
+							<edge vertexkey="875" edgekey="932"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="895">
+						<edges>
+							<edge vertexkey="876" edgekey="933"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="896">
+						<edges>
+							<edge vertexkey="877" edgekey="934"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="897">
+						<edges>
+							<edge vertexkey="878" edgekey="935"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="898">
+						<edges>
+							<edge vertexkey="879" edgekey="936"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="899">
+						<edges>
+							<edge vertexkey="880" edgekey="937"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="900">
+						<edges>
+							<edge vertexkey="881" edgekey="938"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="901">
+						<edges>
+							<edge vertexkey="882" edgekey="939"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="902">
+						<edges>
+							<edge vertexkey="883" edgekey="940"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="903">
+						<edges>
+							<edge vertexkey="884" edgekey="941"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="904">
+						<edges>
+							<edge vertexkey="885" edgekey="942"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="905">
+						<edges>
+							<edge vertexkey="886" edgekey="943"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="906">
+						<edges>
+							<edge vertexkey="847" edgekey="944"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="907">
+						<edges>
+							<edge vertexkey="850" edgekey="945"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="908">
+						<edges>
+							<edge vertexkey="853" edgekey="946"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
