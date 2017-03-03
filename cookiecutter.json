@@ -3,6 +3,7 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "project_short_description": "Oasis Model",
   "version": "0.0.1",
+  "primary_language": "Python",
   "organization": "ORG",
   "model_identifier": "MODEL",
   "model_version": "0.0.0.1",
