@@ -1,99 +1,66 @@
-import os
+__all__ = []    # list to store names of public methods and attributes in this module
+                # that are automatically imported by using `import *`
+
+# Python 2 standard library imports
+import csv
+import io
 import logging
-from oasis_keys_server.BaseKeysLookup import BaseKeysLookup
-from oasis_utils import oasis_utils, oasis_log_utils
+import os
 
-class KeysLookup(BaseKeysLookup):
-    """
-    CatRisks model keys lookup logic.
-    """
+# Python 2 non-standard library imports
 
-    areas = None
-    vulnerabilities = None
-    location_map = None
-    vulnerability_map = None
-    construction_class = None
+# Oasis utils and other Oasis imports
+from oasis_utils import (
+    oasis_utils,
+    oasis_log_utils,
+)
+
+from oasis_keys_server import BaseKeysLookup
+
+class ModelNameKeysLookup(BaseKeysLookup):
+    """
+    Model-specific keys lookup logic for the model with shortname 'ModelName'. Multiple models
+    each get their own keys lookup class, ModelNameKeysLookup, with a unique model name prefix.
+    """
 
     @oasis_log_utils.oasis_log()
-    def init(self, keys_data_directory):
+    def __init__(
+        self,
+        keys_data_directory=os.path.join(os.sep, 'var', 'oasis', 'keys_data'),
+        supplier=None,
+        model_name=None,
+        model_version='0.0.0.1',
+        areas=None,
+        vulnerabilities=None,
+        location_map=None,
+        vulnerability_map=None,
+        construction_class=None
+    ):
         """
         Initialise the static data required for the lookup.
         """
+        super(self.__class__, self).__init__(
+            keys_data_directory,
+            supplier,
+            model_name,
+            model_version,
+            areas,
+            vulnerabilities,
+            location_map,
+            vulnerability_map,
+            construction_class
+        )
         pass
-
-
+    
+    
     @oasis_log_utils.oasis_log()
-    def process_row(self, row, results):
+    def process_locations(self, loc_data):
         """
-        Process a location row, and add the results of the
-        lookup to the results.
+        Read in raw location rows from request CSV data and generate
+        exposure records. This is the main method to override in each model
+        keys lookup class. Other methods inherited from the superclass
+        BaseKeysLookup can also be used, please refer to the source:
+        
+        https://github.com/OasisLMF/oasis_keys_server/blob/master/BaseKeysLookup.py
         """
-        record = None
-        row_failed = False
-        for coverage_type in (
-                oasis_utils.BUILDING_COVERAGE_CODE,
-                oasis_utils.CONTENTS_COVERAGE_CODE,
-                oasis_utils.TIME_COVERAGE_CODE):
-            
-            ap_id, area_peril_message = (oasis_utils.UNKNOWN_ID, "")
-            vul_id, vulnerability_message = (oasis_utils.UNKNOWN_ID, "")
-
-            try:
-                if record is None:
-                    record = self._read_record(row)
-                record['coverage_type'] = coverage_type
-                ap_id, area_peril_message = self._get_area_peril_id(record)
-                vul_id, vulnerability_message = self._get_vulnerability_id(record)
-            except:
-                row_failed = True
-                logging.exception("Error processing row: {}".format(row))
-
-            if row_failed:
-                status = oasis_utils.KEYS_STATUS_FAIL
-            else:
-                status = self._get_lookup_success(ap_id, vul_id)
-
-            exposure_record = {
-                'id': record['loc_id'],
-                'peril_id': oasis_utils.PERIL_ID_QUAKE,
-                'coverage': coverage_type,
-                'area_peril_id': ap_id,
-                'vulnerability_id': vul_id,
-                'message': "{} - {}".format(
-                    area_peril_message, vulnerability_message),
-                'status': status
-            }
-            results.append(exposure_record)
-
-
-    def _read_record(self, line):
-        """
-        Parse a line from the CSV data
-        """
-        vals = [x.strip().upper() for x in line]
-        vals.reverse()
-        return {
-            'loc_id': self._to_int(vals.pop()),
-            'postalcode': vals.pop().strip(),
-            'statecode': vals.pop().strip(),
-            'bldgscheme': vals.pop().strip(),
-            'bldgclass': vals.pop().strip(),
-            'occscheme': vals.pop().strip(),
-            'occtype': vals.pop().strip(),
-            'longitude': self._to_float(vals.pop().strip()),
-            'latitude': self._to_float(vals.pop().strip()),
-            'urban_rural': vals.pop().strip(),
-            'secmod1': vals.pop().strip(),
-            'secmod2': vals.pop().strip()}
-
-    def _get_area_peril_id(self, record):
-        """
-        Get the area peril ID for a particular location record.
-        """
-        return oasis_utils.UNKNOWN_ID, "Not implemented"
-
-    def _get_vulnerability_id(self, record):
-        """
-        Get the vulnerability ID for a particular location record.
-        """
-        return oasis_utils.UNKNOWN_ID-1, "Not implemented"
+        pass
