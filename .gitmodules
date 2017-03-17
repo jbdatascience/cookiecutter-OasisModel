@@ -1,0 +1,6 @@
+[submodule "{{cookiecutter.project_slug}}/src/oasis_utils"]
+	path = {{cookiecutter.project_slug}}/src/oasis_utils
+	url = https://github.com/OasisLMF/oasis_utils
+[submodule "{{cookiecutter.project_slug}}/src/oasis_keys_server"]
+	path = {{cookiecutter.project_slug}}/src/oasis_keys_server
+	url = https://github.com/OasisLMF/oasis_keys_server

@@ -1,6 +1,0 @@
-[submodule "src/oasis_utils"]
-	path = src/oasis_utils
-	url = https://github.com/OasisLMF/oasis_utils
-[submodule "src/oasis_keys_server"]
-	path = src/oasis_keys_server
-	url = https://github.com/OasisLMF/oasis_keys_server
