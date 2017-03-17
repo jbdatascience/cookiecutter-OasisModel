@@ -1,5 +1,8 @@
-__all__ = []    # list to store names of public methods and attributes in this module
-                # that are automatically imported by using `import *`
+__all__ = [
+  'ModelNameKeysLookup'
+]  # This should be a list of all public methods and attributes that can be imported from this
+   # module elsewhere. This list should contain the class names of all the model-specific keys
+   # keys lookup classes defined here.
 
 # Python 2 standard library imports
 import csv
