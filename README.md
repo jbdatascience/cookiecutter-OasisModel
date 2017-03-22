@@ -28,9 +28,9 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── Dockerfile.ORG_MODEL_model_execution_worker
     ├── LICENSE
     ├── README.md
-    ├── example_data
-    ├── flamingo
-    ├── keys_data
-    ├── keys_server_config
-    ├── model_data
-    └── src
+    ├── example_data/
+    ├── flamingo/
+    ├── keys_data/
+    ├── keys_server_config/
+    ├── model_data/
+    └── src/
