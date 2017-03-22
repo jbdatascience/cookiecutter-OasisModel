@@ -20,7 +20,7 @@ def create_git_repo():
 
 def add_git_submodules():
     #print 'Creating submodules in {}'.format(SUBMODULE_TARGET_DIR)
-    for name, url in GIT_SUBMODULES.iteritems():
+    for name, url in GIT_SUBMODULES.items():
         check_call(['git', 'submodule', 'add', '-f', '{}'.format(url), '{}'.format(os.path.join(SUBMODULE_TARGET_DIR, name))])
         check_call(['cd', os.path.join(SUBMODULE_TARGET_DIR, name)])
         check_call(['git', 'checkout', 'master'])
