@@ -29,12 +29,21 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── LICENSE
     ├── README.md
     ├── example_data/
+    │   ├── Exposures/
+    │   ├── MappingFiles/
+    │   ├── TransformationFiles/
+    │   └── ValidationFiles/
     ├── flamingo/
+    │   └── MEEQ/
     ├── keys_data/
     ├── keys_server_config/
+    │   ├── apache.conf
+    │   ├── oasis.conf
+    │   └── oasis.wsgi
     ├── model_data/
+    │   └── data.csv
     └── src/
-    
-This repository contains Git submodules, therefore it should be cloned using
-
-    git clone --recursive https://github.com/OasisLMF/cookiecutter-OasisModel
+        ├── keys_server/
+        ├── model_execution_worker/
+        ├── oasis_keys_server/
+        └── oasis_utils/

@@ -15,7 +15,6 @@ SUBMODULE_TARGET_DIR = os.path.join(BASE_DIR, 'src')
 
 def create_git_repo():
     check_call(['git', 'init'])
-    check_call(['rm', '-fr', 'src/oasis_utils', 'src/oasis_keys_server'])
     check_call(['git', 'add', '.'])
     check_call(['git', 'commit', '-m', 'Post-project creation initialisation'])
 
