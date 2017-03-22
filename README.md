@@ -34,3 +34,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── keys_server_config/
     ├── model_data/
     └── src/
+    
+This repository contains Git submodules, therefore it should be cloned using
+
+    git clone --recursive https://github.com/OasisLMF/cookiecutter-OasisModel
