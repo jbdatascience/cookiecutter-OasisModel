@@ -19,7 +19,7 @@ def create_git_repo():
 def add_git_submodules():
     for name, url in GIT_SUBMODULES.items():
         check_call(['git', 'submodule', 'add', '-f', '{}'.format(url), 'src/{}'.format(name)])
-        check_call(['cd', 'src/{}'.format(name)])
+        check_call(['cd', '{}/src/name'.format({{cookiecutter.project_slug}})])
         check_call(['git', 'checkout', 'master'])
 
 if __name__ == '__main__':
