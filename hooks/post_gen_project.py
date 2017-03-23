@@ -10,8 +10,6 @@ GIT_SUBMODULES = {
     'oasis_keys_server': 'https://github.com/OasisLMF/oasis_keys_server'
 }
 
-BASE_DIR = os.getcwd()
-SUBMODULE_TARGET_DIR = os.path.join(BASE_DIR, 'src')
 
 def create_git_repo():
     check_call(['git', 'init'])
@@ -20,15 +18,15 @@ def create_git_repo():
 
 def add_git_submodules():
     for name, url in GIT_SUBMODULES.items():
-        check_call(['git', 'submodule', 'add', '-f', '{}'.format(url), '{}'.format(os.path.join(SUBMODULE_TARGET_DIR, name))])
-        check_call(['cd', os.path.join(SUBMODULE_TARGET_DIR, name)])
+        check_call(['git', 'submodule', 'add', '-f', '{}'.format(url), 'src/{}'.format(name)])
+        check_call(['cd', 'src/{}'.format(name)])
         check_call(['git', 'checkout', 'master'])
 
 if __name__ == '__main__':
-    print('\nCreating Git repo in {}.\n'.format(BASE_DIR))
+    print('\nCreating Git repo in {}.\n'.format(os.getcwd()))
     create_git_repo()
     time.sleep(3)
-    print('\nCreating submodules in {}.\n'.format(SUBMODULE_TARGET_DIR))
+    print('\nCreating submodules in {}.\n'.format(os.path.join(os.getcwd(), 'src')))
     add_git_submodules()
     time.sleep(1)
 
