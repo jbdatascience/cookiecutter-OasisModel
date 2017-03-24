@@ -26,24 +26,27 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     oasis_model/
     ├── Dockerfile.ORG_MODEL_keys_server
     ├── Dockerfile.ORG_MODEL_model_execution_worker
-    ├── LICENSE
-    ├── README.md
-    ├── example_data/
-    │   ├── Exposures/
-    │   ├── MappingFiles/
-    │   ├── TransformationFiles/
-    │   └── ValidationFiles/
-    ├── flamingo/
-    │   └── MEEQ/
-    ├── keys_data/
-    ├── keys_server_config/
+    ├── example_data
+    │   ├── Exposures
+    │   ├── MappingFiles
+    │   ├── TransformationFiles
+    │   └── ValidationFiles
+    ├── flamingo
+    │   ├── generic_model
+    │   └── MEEQ
+    ├── keys_data
+    ├── keys_server_config
     │   ├── apache.conf
     │   ├── oasis.conf
     │   └── oasis.wsgi
-    ├── model_data/
+    ├── LICENSE
+    ├── model_data
     │   └── data.csv
-    └── src/
-        ├── keys_server/
-        ├── model_execution_worker/
-        ├── oasis_keys_server/
-        └── oasis_utils/
+    ├── README.md
+    └── src
+        ├── keys_server
+        ├── model_execution_worker
+        ├── oasis_keys_lookup
+        ├── oasis_keys_server
+        └── oasis_utils
+
