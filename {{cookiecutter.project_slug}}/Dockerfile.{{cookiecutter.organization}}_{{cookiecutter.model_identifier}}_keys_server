@@ -18,9 +18,11 @@ RUN chmod a+w /var/log/oasis/keys_server.log
 COPY ./keys_server_config/apache2.conf /etc/apache2/apache2.conf
 COPY ./keys_server_config/oasis.conf /etc/apache2/sites-available/oasis.conf
 COPY ./keys_server_config/oasis.wsgi /var/www/oasis/oasis.wsgi
+COPY ./src/oasis_utils /var/www/oasis/oasis_utils/
+COPY ./src/oasis_keys_lookup /var/www/oasis/oasis_keys_lookup/
 COPY ./src/keys_server /var/www/oasis/keys_server/
 COPY ./src/oasis_keys_server /var/www/oasis/oasis_keys_server/
-COPY ./src/oasis_utils /var/www/oasis/oasis_utils/
+
 COPY ./keys_data /var/oasis/keys_data
 RUN chmod -R ugo=rwx /var/oasis/keys_data
 
