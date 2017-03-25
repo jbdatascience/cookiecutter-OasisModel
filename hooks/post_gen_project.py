@@ -28,9 +28,8 @@ def add_git_submodules():
 
 if __name__ == '__main__':
     print('\nCreating Git repo in {}.\n'.format(os.getcwd()))
-    create_git_repo()
-    time.sleep(3)
-    print('\nCreating submodules in {}.\n'.format(os.path.join(os.getcwd(), 'src')))
+    time.sleep(2)
+    create_git_repo()    
+    print('\nAdding Git submodules in {}.\n'.format(os.path.join(os.getcwd(), 'src')))
+    time.sleep(2)
     add_git_submodules()
-    time.sleep(1)
-
