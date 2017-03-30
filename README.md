@@ -5,7 +5,7 @@ A cookie cutter project structure for Oasis models that can be replicated using 
     /home/foo$ pip install cookiecutter
     
     # Run cookiecutter
-    /home/foo$ cookiecutter git+ssh://git@github.com/OasisLMF/cookiecutter-OasisModel
+    /home/foo$ cookiecutter https://github.com/OasisLMF/cookiecutter-OasisModel
 
 You should see the following prompts for project and model settings (use ENTER to use default values):
     
