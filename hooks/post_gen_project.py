@@ -27,6 +27,10 @@ def add_git_submodules():
             ]
         )
 
+def commit_git_submodules():
+    check_call(['git', 'add', '-A'])
+    check_call(['git', 'commit', '-m', 'Add Git submodules'])
+
 
 if __name__ == '__main__':
     cwd = os.getcwd()
@@ -36,3 +40,6 @@ if __name__ == '__main__':
     print('\nAdding Git submodules in {}.\n'.format(os.path.join(cwd, 'src')))
     time.sleep(2)
     add_git_submodules()
+    print('\nCommiting Git submodules.\n')
+    time.sleep(2)
+    commit_git_submodules()
