@@ -1,6 +1,6 @@
 {
   "project_name": "Oasis Model",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "project_slug": "{{ cookiecutter.project_name.replace(' ', '_') }}",
   "project_short_description": "Oasis Model",
   "version": "0.0.1",
   "primary_language": "Python",
