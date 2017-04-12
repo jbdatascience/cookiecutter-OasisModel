@@ -36,10 +36,12 @@ if __name__ == '__main__':
     cwd = os.getcwd()
     print('\nCreating Git repo in {}.\n'.format(cwd))
     time.sleep(2)
-    create_git_repo()    
+    create_git_repo()
+
     print('\nAdding Git submodules in {}.\n'.format(os.path.join(cwd, 'src')))
     time.sleep(2)
     add_git_submodules()
+
     print('\nCommiting Git submodules.\n')
     time.sleep(2)
     commit_git_submodules()
