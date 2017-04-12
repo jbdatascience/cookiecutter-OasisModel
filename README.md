@@ -4,13 +4,13 @@ A cookie cutter project structure for Oasis models that can be replicated using 
     # Install the cookiecutter tool (if not present)
     /home/foo$ pip install cookiecutter
     
-    # Run cookiecutter
-    /home/foo$ cookiecutter https://github.com/OasisLMF/cookiecutter-OasisModel
+    # Run cookiecutter on the source repo (the URI can be specified using either https or git+ssh)
+    /home/foo$ cookiecutter git+ssh://git@github.com/OasisLMF/cookiecutter-OasisModel
 
 You should see the following prompts for project and model settings in sequence (press ENTER to use default values):
     
     project_name [Oasis Model]:
-    project_slug [gc-cnfl]: 
+    project_slug [OasisModel]: 
     project_short_description [Oasis Model]:
     version [0.0.1]: 
     primary_language [Python]: 
