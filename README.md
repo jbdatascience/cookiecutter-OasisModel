@@ -23,9 +23,9 @@ The project structure is contained in the repo folder named <a href="https://git
 
 For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D" target="_blank">`{{cookiecutter.project_slug}}`</a> directory you should see the following project structure in the place where you ran the command (assuming you used default boilerplate values for the project name, organization and model name):
 
-    Oasis_Model/
-    ├── Dockerfile.ORG_MODEL_keys_server
-    ├── Dockerfile.ORG_MODEL_model_execution_worker
+    OasisModel/
+    ├── Dockerfile.org_model_keys_server
+    ├── Dockerfile.org_model_model_execution_worker
     ├── LICENSE
     ├── README.md
     ├── flamingo/
@@ -88,7 +88,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   └── vulnerability.csv
     └── src/
         ├── keys_server/
-        │   ├── KeysLookup.py
+        │   ├── MODELKeysLookup.py
         │   ├── __init__.py
         │   └── utils.py
         ├── model_execution_worker/
