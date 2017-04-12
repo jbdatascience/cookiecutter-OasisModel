@@ -1,0 +1,9 @@
+FROM coreoasis/model_execution_worker:OASIS_0_0_0_167
+
+COPY ./src/model_execution_worker/{{cookiecutter.organization.replace(' ', '')}} ./model_execution_worker/{{cookiecutter.organization.replace(' ', '')}}
+COPY ./model_data/{{cookiecutter.model_identifier.upper()}} /var/oasis/model_data/{{cookiecutter.organization.replace(' ', '')}}/{{cookiecutter.model_identifier.upper()}}
+RUN touch /var/log/oasis/celery_worker.log
+RUN chmod a+w /var/log/oasis/celery_worker.log
+
+ENTRYPOINT
+# Define entry points here
