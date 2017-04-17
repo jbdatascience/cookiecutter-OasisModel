@@ -19,7 +19,7 @@ You should see the following prompts for project and model settings in sequence 
     model_version [0.0.0.1]: 
     email [mark.pinkerton@oasislmf.org]: 
 
-These prompts are self-explanatory, but `project_name`, `project_slug`, `organization`, `model_identifier` and `model_version` pare mandatory, while the others are optional. Here are some guidelines to follow for the mandatory prompts.
+These prompts are self-explanatory, but `project_name`, `project_slug`, `organization`, `model_identifier` and `model_version` are mandatory, while the others are optional. Here are some guidelines to follow for the mandatory prompts.
 
 * `project_name` should be a concise title for the project (title words should be capitalised)
 * `project_slug` is the folder name for the project and by default cookiecutter will set this to a camel casing of the `project_name` value, but you may enter a specific value yourself, provided it does not contain spaces or any special characters not normally present in folder names
