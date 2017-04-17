@@ -1,5 +1,5 @@
 # cookiecutter-OasisModel
-A cookie cutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>:
+A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>:
 
     # Install the cookiecutter tool (if not present)
     /home/foo$ pip install cookiecutter
@@ -19,7 +19,15 @@ You should see the following prompts for project and model settings in sequence 
     model_version [0.0.0.1]: 
     email [mark.pinkerton@oasislmf.org]: 
 
-The project structure is contained in the repo folder named <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D" target="_blank">`{{cookiecutter.project_slug}}`</a> and project-related settings such as the project descriptive name, model name and version etc. are configurable in the repo file <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/blob/master/cookiecutter.json" target="_blank">`cookiecutter.json`</a> and set during runtime by prompts.
+These prompts are self-explanatory, but `project_name`, `project_slug`, `organization`, `model_identifier` and `model_version` pare mandatory, while the others are optional. Here are some guidelines to follow for the mandatory prompts.
+
+* `project_name` should be a concise title for the project (title words should be capitalised)
+* `project_slug` is the folder name for the project and by default cookiecutter will set this to a camel casing of the `project_name` value, but you may enter a specific value yourself, provided it does not contain spaces or any special characters not normally present in folder names
+* `organization` should be either a camel case of the organization name or an acronym
+* `model_identifier` should be an acronym of the model name
+* `model_version` should be a four-part dot-separated string of integers indicating version number, release number, and major and minor version numbers
+
+The project structure is contained in the repo folder named <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D" target="_blank">`{{cookiecutter.project_slug}}`</a> and project-related settings such as the project descriptive name, model name and version etc., which are set during runtime via the prompts, are configurable in the repo file <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/blob/master/cookiecutter.json" target="_blank">`cookiecutter.json`</a>.
 
 For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D" target="_blank">`{{cookiecutter.project_slug}}`</a> directory you should see the following project structure in the place where you ran the command (assuming you used default boilerplate values for the project name, organization and model name):
 
