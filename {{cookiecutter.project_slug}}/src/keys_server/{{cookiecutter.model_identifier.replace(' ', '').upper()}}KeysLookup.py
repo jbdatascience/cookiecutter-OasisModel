@@ -1,5 +1,5 @@
 __all__ = [
-  '{{cookiecutter.model_identifier.upper()}}KeysLookup'
+  '{{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup'
 ]  # This should be a list of all public methods and attributes that can be imported from this
    # module elsewhere. This list should contain the class names of all the model-specific keys
    # keys lookup classes defined here.
@@ -20,7 +20,7 @@ from oasis_utils import (
 
 from oasis_keys_lookup import BaseKeysLookup
 
-class {{cookiecutter.model_identifier.upper()}}NameKeysLookup(BaseKeysLookup):
+class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(BaseKeysLookup):
     """
     Model-specific keys lookup logic.
     """
