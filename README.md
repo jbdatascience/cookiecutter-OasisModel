@@ -23,9 +23,9 @@ These prompts are self-explanatory, but `project_name`, `project_slug`, `organiz
 
 * `project_name` should be a concise title for the project (title words should be capitalised)
 * `project_slug` is the folder name for the project and by default cookiecutter will set this to a camel casing of the `project_name` value, but you may enter a specific value yourself, provided it does not contain spaces or any special characters not normally present in folder names
-* `organization` should be either a camel case of the organization name or an acronym
+* `organization` should either be a camel case of the organization name or an acronym
 * `model_identifier` should be an acronym of the model name
-* `model_version` should be a four-part dot-separated string of integers indicating version number, release number, and major and minor version numbers
+* `model_version` this can be any meaningful string that indicates a version for the model (by default it is set to `0.0.0.1`)
 
 The project structure is contained in the repo folder named <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D" target="_blank">`{{cookiecutter.project_slug}}`</a> and project-related settings such as the project descriptive name, model name and version etc., which are set during runtime via the prompts, are configurable in the repo file <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/blob/master/cookiecutter.json" target="_blank">`cookiecutter.json`</a>.
 
@@ -34,8 +34,6 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     OasisModel/
     ├── Dockerfile.org_model_keys_server
     ├── Dockerfile.org_model_model_execution_worker
-    ├── LICENSE
-    ├── README.md
     ├── flamingo/
     │   └── generic_model/
     │       ├── Files/
@@ -73,45 +71,51 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │           ├── Generic_Windstorm_ModelLoc.xsd
     │           └── Generic_Windstorm_SourceLoc.xsd
     ├── keys_data/
+    │   └── MODEL/
+    │       └── ModelVersion.csv
     ├── keys_server_config/
     │   ├── apache.conf
     │   ├── oasis.conf
     │   └── oasis.wsgi
+    ├── LICENSE
     ├── model_data/
-    │   ├── damage_bin_dict.bin
-    │   ├── damage_bin_dict.csv
-    │   ├── data.csv
-    │   ├── events.bin
-    │   ├── events.csv
-    │   ├── footprint.bin
-    │   ├── footprint.csv
-    │   ├── footprint.idx
-    │   ├── occurrence.bin
-    │   ├── occurrence.csv
-    │   ├── random.bin
-    │   ├── random.csv
-    │   ├── returnperiods.bin
-    │   ├── returnperiods.csv
-    │   ├── vulnerability.bin
-    │   └── vulnerability.csv
+    │   └── MODEL/
+    │       ├── damage_bin_dict.bin
+    │       ├── damage_bin_dict.csv
+    │       ├── data.csv
+    │       ├── events.bin
+    │       ├── events.csv
+    │       ├── footprint.bin
+    │       ├── footprint.csv
+    │       ├── footprint.idx
+    │       ├── ModelVersion.csv
+    │       ├── occurrence.bin
+    │       ├── occurrence.csv
+    │       ├── random.bin
+    │       ├── random.csv
+    │       ├── returnperiods.bin
+    │       ├── returnperiods.csv
+    │       ├── vulnerability.bin
+    │       └── vulnerability.csv
+    ├── README.md
     └── src/
         ├── keys_server/
-        │   ├── MODELKeysLookup.py
         │   ├── __init__.py
+        │   ├── MODELKeysLookup.py
         │   └── utils.py
         ├── model_execution_worker/
-        │   └── ORG/
+        │   └── OasisModel
         │       ├── __init__.py
         │       └── supplier_model_runner.py
         ├── oasis_keys_lookup/
         │   ├── BaseKeysLookup.py
-        │   ├── README.md
-        │   └── __init__.py
+        │   ├── __init__.py
+        │   └── README.md
         ├── oasis_keys_server/
+        │   ├── app.py
+        │   ├── __init__.py
         │   ├── KeysServer.ini
         │   ├── README.md
-        │   ├── __init__.py
-        │   ├── app.py
         │   ├── requirements.txt
         │   └── startup.sh
         └── oasis_utils/
@@ -122,4 +126,4 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
             ├── oasis_utils.py
             └── requirements.txt
 
-    17 directories, 72 files
+    19 directories, 74 files

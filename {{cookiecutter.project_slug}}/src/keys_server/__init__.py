@@ -2,4 +2,4 @@
 Module initialiser.
 '''
 from .utils import *
-from .KeysLookup import *
+from .{{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup import *
