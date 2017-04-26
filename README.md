@@ -74,7 +74,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   └── MODEL/
     │       └── ModelVersion.csv
     ├── keys_server_config/
-    │   ├── apache.conf
+    │   ├── apache2.conf
     │   ├── oasis.conf
     │   └── oasis.wsgi
     ├── LICENSE
@@ -102,9 +102,10 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
         ├── keys_server/
         │   ├── __init__.py
         │   ├── MODELKeysLookup.py
-        │   └── utils.py
+        │   └── utils/
+        │       └── __init__.py
         ├── model_execution_worker/
-        │   └── OasisModel
+        │   └── OasisModel/
         │       ├── __init__.py
         │       └── supplier_model_runner.py
         ├── oasis_keys_lookup/
@@ -126,4 +127,5 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
             ├── oasis_utils.py
             └── requirements.txt
 
-    19 directories, 74 files
+    20 directories, 74 files
+

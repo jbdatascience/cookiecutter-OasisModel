@@ -20,6 +20,9 @@ from oasis_utils import (
 
 from oasis_keys_lookup import BaseKeysLookup
 
+# Model keys server imports
+from utils import *
+
 class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(BaseKeysLookup):
     """
     Model-specific keys lookup logic.

@@ -4,7 +4,7 @@ COPY ./src/model_execution_worker/{{cookiecutter.organization.replace(' ', '')}}
 COPY ./model_data/ /var/oasis/model_data/
 COPY ./model_data/{{cookiecutter.model_identifier.replace(' ', '').upper()}} /var/oasis/model_data/{{cookiecutter.organization.replace(' ', '')}}/{{cookiecutter.model_identifier.replace(' ', '').upper()}}
 RUN touch /var/log/oasis/celery_worker.log
-RUN chmod a+w /var/log/oasis/celery_worker.log
+RUN chmod 666 /var/log/oasis/celery_worker.log
 
 ENTRYPOINT
 # Define entry points here
