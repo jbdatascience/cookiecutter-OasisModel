@@ -100,8 +100,9 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── README.md
     └── src/
         ├── keys_server/
-        │   ├── __init__.py
         │   ├── MODELKeysLookup.py
+        │   ├── __init__.py
+        │   ├── requirements.txt
         │   └── utils/
         │       └── __init__.py
         ├── model_execution_worker/
@@ -127,5 +128,5 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
             ├── oasis_utils.py
             └── requirements.txt
 
-    20 directories, 74 files
+    20 directories, 75 files
 
