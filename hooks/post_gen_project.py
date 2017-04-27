@@ -29,7 +29,7 @@ def add_git_submodules():
 
 def commit_git_submodules():
     check_call(['git', 'add', '-A'])
-    check_call(['git', 'commit', '-m', 'Add Git submodules'])
+    check_call(['git', 'commit', '-m', 'Commit for Git submodules'])
 
 
 if __name__ == '__main__':
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     time.sleep(2)
     create_git_repo()
 
-    print('\nAdding Git submodules in {}.\n'.format(os.path.join(cwd, 'src')))
+    print('\nAdding Oasis repositories as Git submodules in {}.\n'.format(os.path.join(cwd, 'src')))
     time.sleep(2)
     add_git_submodules()
 
