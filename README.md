@@ -34,10 +34,12 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     OasisModel/
     ├── Dockerfile.org_model_keys_server
     ├── Dockerfile.org_model_model_execution_worker
-    ├── flamingo/
-    │   └── generic_model/
-    │       ├── Files/
-    │       ├── MappingFiles/
+    ├── LICENSE
+    ├── README.md
+    ├── flamingo
+    │   └── generic_model
+    │       ├── Files
+    │       ├── MappingFiles
     │       │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
     │       │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
     │       │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
@@ -45,8 +47,8 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       │   ├── Generic_SourceAccToCanAcc_A.mfd
     │       │   ├── Generic_Windstorm_CanLoc_BToModelLoc.mfd
     │       │   └── Generic_Windstorm_SourceLocToCanLoc_A.mfd
-    │       ├── SQLFiles/
-    │       ├── TransformationFiles/
+    │       ├── SQLFiles
+    │       ├── TransformationFiles
     │       │   ├── MappingMapToGeneric_CanAcc_A.xslt
     │       │   ├── MappingMapToGeneric_Earthquake_CanLoc_A.xslt
     │       │   ├── MappingMapToGeneric_Earthquake_ModelLoc.xslt
@@ -54,7 +56,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       │   ├── MappingMapToGeneric_Flood_ModelLoc.xslt
     │       │   ├── MappingMapToGeneric_Windstorm_CanLoc_A.xslt
     │       │   └── MappingMapToGeneric_Windstorm_ModelLoc.xslt
-    │       └── ValidationFiles/
+    │       └── ValidationFiles
     │           ├── Generic_CanAcc_A.xsd
     │           ├── Generic_CanAcc_B.xsd
     │           ├── Generic_Earthquake_CanLoc_A.xsd
@@ -70,16 +72,16 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │           ├── Generic_Windstorm_CanLoc_B.xsd
     │           ├── Generic_Windstorm_ModelLoc.xsd
     │           └── Generic_Windstorm_SourceLoc.xsd
-    ├── keys_data/
-    │   └── MODEL/
+    ├── keys_data
+    │   └── MODEL
     │       └── ModelVersion.csv
-    ├── keys_server_config/
+    ├── keys_server_config
     │   ├── apache2.conf
     │   ├── oasis.conf
     │   └── oasis.wsgi
-    ├── LICENSE
-    ├── model_data/
-    │   └── MODEL/
+    ├── model_data
+    │   └── MODEL
+    │       ├── ModelVersion.csv
     │       ├── damage_bin_dict.bin
     │       ├── damage_bin_dict.csv
     │       ├── data.csv
@@ -88,7 +90,6 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       ├── footprint.bin
     │       ├── footprint.csv
     │       ├── footprint.idx
-    │       ├── ModelVersion.csv
     │       ├── occurrence.bin
     │       ├── occurrence.csv
     │       ├── random.bin
@@ -97,36 +98,40 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       ├── returnperiods.csv
     │       ├── vulnerability.bin
     │       └── vulnerability.csv
-    ├── README.md
-    └── src/
-        ├── keys_server/
-        │   ├── MODELKeysLookup.py
-        │   ├── __init__.py
-        │   ├── requirements.txt
-        │   └── utils/
-        │       └── __init__.py
-        ├── model_execution_worker/
-        │   └── OasisModel/
-        │       ├── __init__.py
-        │       └── supplier_model_runner.py
-        ├── oasis_keys_lookup/
-        │   ├── BaseKeysLookup.py
-        │   ├── __init__.py
-        │   └── README.md
-        ├── oasis_keys_server/
-        │   ├── app.py
-        │   ├── __init__.py
-        │   ├── KeysServer.ini
-        │   ├── README.md
-        │   ├── requirements.txt
-        │   └── startup.sh
-        └── oasis_utils/
-            ├── __init__.py
-            ├── oasis_db_utils.py
-            ├── oasis_log_utils.py
-            ├── oasis_sys_utils.py
-            ├── oasis_utils.py
-            └── requirements.txt
+    ├── oasis_build_utils
+    │   └── keys_server_build_utils.sh
+    ├── org_model_keys_server_build_config
+    ├── src
+    │   ├── keys_server
+    │   │   ├── MODELKeysLookup.py
+    │   │   ├── __init__.py
+    │   │   ├── requirements.txt
+    │   │   └── utils
+    │   │       └── __init__.py
+    │   ├── model_execution_worker
+    │   │   └── OasisModel
+    │   │       ├── __init__.py
+    │   │       └── supplier_model_runner.py
+    │   ├── oasis_keys_lookup
+    │   │   ├── BaseKeysLookup.py
+    │   │   ├── README.md
+    │   │   └── __init__.py
+    │   ├── oasis_keys_server
+    │   │   ├── KeysServer.ini
+    │   │   ├── README.md
+    │   │   ├── __init__.py
+    │   │   ├── app.py
+    │   │   ├── requirements.txt
+    │   │   └── startup.sh
+    │   └── oasis_utils
+    │       ├── __init__.py
+    │       ├── oasis_db_utils.py
+    │       ├── oasis_log_utils.py
+    │       ├── oasis_sys_utils.py
+    │       ├── oasis_utils.py
+    │       └── requirements.txt
+    └── tests
+        └── tests.py
 
-    20 directories, 75 files
+    22 directories, 78 files
 

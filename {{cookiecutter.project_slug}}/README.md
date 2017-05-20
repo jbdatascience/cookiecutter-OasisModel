@@ -11,8 +11,9 @@ This will create a folder named `<repo name>`. The main body of the Python code 
 * `oasis_utils`: Oasis utilities for logging, data validation and conversion, lookup-related flags and constants, etc.
 * `oasis_keys_lookup`: the Oasis base keys lookup class `BaseKeysLookup` which serves as a template for the model-specific lookup classes
 * `oasis_keys_server`: the Oasis Flask keys server
+* `oasis_build_utils`: Oasis repo containing utilities for building and running keys server Docker images
 
-Of these subpackages `oasis_utils`, `oasis_keys_lookup` and `oasis_keys_server` are Oasis GitHub repositories which are contained in `<repo name>` as Git submodules - you cannot push changes to these repositories directly.
+Of these subpackages `oasis_utils`, `oasis_keys_lookup`, `oasis_keys_server` and `oasis_build_utils` are Oasis GitHub repositories which are contained in `<repo name>` as Git submodules - you cannot push changes to these repositories directly.
 
 After the cloning, you may want to `cd` into `<repo name>` and run the command
 
