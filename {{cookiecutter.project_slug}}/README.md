@@ -14,6 +14,8 @@ This will create a folder named `<repo name>`. The main body of the Python code 
 
 Of these subpackages `oasis_utils`, `oasis_keys_lookup` and `oasis_keys_server` are Oasis GitHub repositories which are contained in `<repo name>` as Git submodules - you cannot push changes to these repositories directly.
 
+There is also a separate submodule at the base of the repo called `oasis_build_utils` which contains a shell script containing utilities for building, running and testing keys server images.
+
 After the cloning, you may want to `cd` into `<repo name>` and run the command
 
     git submodule foreach 'git checkout master && git pull origin'
