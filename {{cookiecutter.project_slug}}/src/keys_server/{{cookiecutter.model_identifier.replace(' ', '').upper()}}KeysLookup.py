@@ -18,12 +18,12 @@ from oasis_utils import (
     oasis_log_utils,
 )
 
-from oasis_keys_lookup import BaseKeysLookup
+from oasis_keys_lookup import OasisBaseKeysLookup
 
 # Model keys server imports
 from utils import *
 
-class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(BaseKeysLookup):
+class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(OasisBaseKeysLookup):
     """
     Model-specific keys lookup logic.
     """
