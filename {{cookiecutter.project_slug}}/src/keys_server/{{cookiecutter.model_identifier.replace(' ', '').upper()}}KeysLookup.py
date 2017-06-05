@@ -29,13 +29,7 @@ class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(Oasis
     """
 
     @oasis_log_utils.oasis_log()
-    def __init__(
-        self,
-        keys_data_directory=os.path.join(os.sep, 'var', 'oasis', 'keys_data'),
-        supplier=None,
-        model_name=None,
-        model_version='0.0.0.1'
-    ):
+    def __init__(self, keys_data_directory, supplier, model_name, model_version):
         """
         Initialise the static data required for the lookup.
         """
