@@ -34,7 +34,7 @@ You should not make any local changes to these submodules because you have read-
 
 ## Building and running the keys server
 
-First, ensure that you have Docker installed on your system and that your user has the permissions to access the Unix socket (run `sudo usermod -a -G docker $USER` to add your user to the `docker` group).
+First, ensure that you have Docker installed on your system and that your Unix user has been added to the `docker` user group (run `sudo usermod -a -G docker $USER`).
 
 There are two ways of building and running the keys server - either using a built-in shell script provided by Oasis (`src/oasis_build_utils/keys_server_build_utils.sh`) or directly using Docker.
 
