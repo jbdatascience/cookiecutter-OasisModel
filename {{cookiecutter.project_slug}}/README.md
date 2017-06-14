@@ -36,9 +36,9 @@ You should not make any local changes to these submodules because you have read-
 
 First, ensure that you have Docker installed on your system and that your Unix user has been added to the `docker` user group (run `sudo usermod -a -G docker $USER`).
 
-There are two ways of building and running the keys server - either using a built-in shell script provided by Oasis (`src/oasis_build_utils/keys_server_build_utils.sh`) or directly using Docker.
+There are two ways of building and running the keys server - either using a built-in shell script in the <a href="https://github.com/OasisLMF/oasis_build_utils" target="_blank">`oasis_build_utils`</a> submodule provided by Oasis or directly using Docker.
 
-To use the shell script first load the build configuration file for the keys server using
+To use the shell script first load the build configuration file for the keys server (from the base of the repository) by running
 
     . oasis_build_utils/keys_server_build_utils.sh <keys server build config file name>
 
