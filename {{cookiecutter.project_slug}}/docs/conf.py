@@ -22,7 +22,7 @@ import sys
 cwd = os.path.dirname(__file__)
 sys.path.insert(0, os.path.abspath(cwd))
 sys.path.insert(0, os.path.abspath(os.path.join(cwd, '..')))
-sys.path.insert(0, os.path.abspath(os.path.join(cwd, '..', '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(cwd, '..', 'src')))
 
 
 # -- General configuration ------------------------------------------------

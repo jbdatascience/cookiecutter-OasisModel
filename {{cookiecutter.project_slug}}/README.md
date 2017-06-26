@@ -83,7 +83,7 @@ The Sphinx configuration file is `docs/conf.py` and to do a fresh build please r
 
     make html
 
-from `docs`.
+from `docs`. The HTML output is located in `docs/_build`.
 
 
 

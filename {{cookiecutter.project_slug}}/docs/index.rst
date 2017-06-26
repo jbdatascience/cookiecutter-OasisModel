@@ -10,8 +10,6 @@ Welcome to {{cookiecutter.project_slug}}'s documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   introduction
-
 Indices and tables
 ==================
 
