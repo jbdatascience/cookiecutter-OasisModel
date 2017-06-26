@@ -66,6 +66,24 @@ You should get a response of `OK` if the keys server has initialised and is runn
 
 The log files to check are `/var/log/apache/error.log` (Apache error log), `/var/log/apache/access.log` (Apache request log), and `/var/log/oasis/keys_server.log` (the keys server Python log). In case of request timeout issues you can edit the `Timeout` option value (in seconds) in the file `/etc/apache2/sites-available/oasis.conf` and restart Apache (`service apache2 restart`).
 
+## Building the Sphinx docs
+
+The Sphinx docs source files are contained in the `docs` subfolder. To build a fresh set of docs please do this within a `virtualenv` first created in the base of the repository
+
+    virtualenv venv
+    source venv/bin/activate
+
+Now you can install Sphinx and the Python requirements for the individual subpackages/Git submodules
+
+    sudo -H pip install Sphinx
+    pip install -r src/oasis_keys_server/requirements.txt
+    pip install -r src/oasis_utils/requirements.txt
+
+The Sphinx configuration file is `docs/conf.py` and to do a fresh build please run the command
+
+    make html
+
+from `docs`.
 
 
 
