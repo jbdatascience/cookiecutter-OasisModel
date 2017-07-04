@@ -77,7 +77,9 @@ coverage.xml
 *.log
 
 # Sphinx documentation
-docs/_build/
+_build
+_static
+_templates
 
 # IntelliJ Idea family of suites
 .idea
@@ -90,6 +92,11 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Archived and compressed files
+.tar
+.gz
+.zip
 
 # Cookiecutter
 output/
