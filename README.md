@@ -1,10 +1,14 @@
 # cookiecutter-OasisModel
-A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>:
+A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>.
 
-    # Install the cookiecutter tool (if not present)
+## First steps
+
+Install the cookiecutter tool (if not present):
+
     /home/foo$ pip install cookiecutter
     
-    # Run cookiecutter on the source repo (the URI can be specified using either https or git+ssh)
+Run cookiecutter on the source repo (the URI can be specified using either `https` or `git` or `git+ssh`):
+
     /home/foo$ cookiecutter git+ssh://git@github.com/OasisLMF/cookiecutter-OasisModel
 
 You should see the following prompts for project and model settings in sequence (press ENTER to use default values):
