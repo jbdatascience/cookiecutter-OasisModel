@@ -159,3 +159,17 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
 
     25 directories, 95 files
 
+
+## Sphinx docs
+
+This repository is enabled with <a href="https://pypi.python.org/pypi/Sphinx" target="_blank">Sphinx</a> documentation and  Sphinx is one of the repository requirements, and should have been installed by running the requirements install command above.
+
+The Sphinx documentation source files are reStructuredText files, and are contained in the `docs` subfolder, which also contains the Sphinx configuration file `conf.py` and the `Makefile` for the build. To do a new build run
+
+    make html
+
+in the `docs` folder. You should see a new set of HTML files and assets in the `_build/html` subfolder (the build directory can be changed to `docs` itself in the `Makefile` but that is not recommended). Now copy the files to the publication repository using
+
+    cp -R _build/html/* /path/to/your/OasisLMF.github.io/cookiecutter-OasisModel/
+
+Add and `git` commit the new files in the publication repository, and this will automatically publish the new documents to the publication site https://oasislmf.github.io.
