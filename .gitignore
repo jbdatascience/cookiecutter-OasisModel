@@ -76,10 +76,8 @@ coverage.xml
 # Django stuff:
 *.log
 
-# Sphinx documentation
+# Sphinx documentation - ignore build folder
 _build
-_static
-_templates
 
 # IntelliJ Idea family of suites
 .idea
