@@ -1,10 +1,14 @@
 # cookiecutter-OasisModel
-A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>:
+A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>.
 
-    # Install the cookiecutter tool (if not present)
+## First steps
+
+Install the cookiecutter tool (if not present):
+
     /home/foo$ pip install cookiecutter
     
-    # Run cookiecutter on the source repo (the URI can be specified using either https or git+ssh)
+Run cookiecutter on the source repo (the URI can be specified using either `https` or `git` or `git+ssh`):
+
     /home/foo$ cookiecutter git+ssh://git@github.com/OasisLMF/cookiecutter-OasisModel
 
 You should see the following prompts for project and model settings in sequence (press ENTER to use default values):
@@ -155,3 +159,17 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
 
     25 directories, 95 files
 
+
+## Sphinx docs
+
+This repository is enabled with <a href="https://pypi.python.org/pypi/Sphinx" target="_blank">Sphinx</a> documentation and  Sphinx is one of the repository requirements. To work on the Sphinx docs for this packge you must have Sphinx installed on your system or in your `virtualenv` environment (recommended).
+
+The Sphinx documentation source files are reStructuredText files, and are contained in the `docs` subfolder, which also contains the Sphinx configuration file `conf.py` and the `Makefile` for the build. To do a new build run
+
+    make html
+
+in the `docs` folder. You should see a new set of HTML files and assets in the `_build/html` subfolder (the build directory can be changed to `docs` itself in the `Makefile` but that is not recommended). Now copy the files to the publication repository using
+
+    cp -R _build/html/* /path/to/your/OasisLMF.github.io/cookiecutter-OasisModel/
+
+Add and `git` commit the new files in the publication repository, and this will automatically publish the new documents to the publication site https://oasislmf.github.io.
