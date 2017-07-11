@@ -162,9 +162,9 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
 
 ## Sphinx docs
 
-This repository is enabled with <a href="https://pypi.python.org/pypi/Sphinx" target="_blank">Sphinx</a> documentation for the Python modules, and the documentation is published to <a href="https://oasislmf.github.io/cookiecutter-OasisModel/" target="_blank">https://oasislmf.github.io/cookiecutter-OasisModel/</a>.
+This repository is enabled with <a href="https://pypi.python.org/pypi/Sphinx" target="_blank">Sphinx</a> documentation for the Python modules, and the documentation is published to <a href="https://oasislmf.github.io/cookiecutter-OasisModel/" target="_blank">https://oasislmf.github.io/cookiecutter-OasisModel/</a> on a fresh build.
 
-on a fresh build. Firstly, to work on the Sphinx docs for this package you must have Sphinx installed on your system or in your `virtualenv` environment (recommended).
+Firstly, to work on the Sphinx docs for this package you must have Sphinx installed on your system or in your `virtualenv` environment (recommended).
 
 The Sphinx documentation source files are reStructuredText files, and are contained in the `docs` subfolder, which also contains the Sphinx configuration file `conf.py` and the `Makefile` for the build. To do a new build run
 
