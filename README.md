@@ -174,4 +174,4 @@ in the `docs` folder. You should see a new set of HTML files and assets in the `
 
     cp -R _build/html/* .
 
-Add and `git` commit the new files, and GitHub pages will automatically  publish the new documents to site https://oasislmf.github.io/cookiecutter-OasisModel/.
+Add and `git` commit the new files, and GitHub pages will automatically  publish the new documents to the documentation site https://oasislmf.github.io/cookiecutter-OasisModel/.
