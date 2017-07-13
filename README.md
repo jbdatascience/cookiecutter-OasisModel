@@ -43,7 +43,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── flamingo/
     │   └── generic_model/
     │       ├── Files/
-    │       ├── MappingFiles/
+    │       ├── MappingFiles
     │       │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
     │       │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
     │       │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
@@ -103,8 +103,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       ├── vulnerability.bin
     │       └── vulnerability.csv
     ├── oasis_build_utils/
-    │   ├── keys_server_build_utils.sh
-    │   └── requirements.txt
+    │   └── keys_server_build_utils.sh
     ├── org_model_keys_server_build_config
     ├── src/
     │   ├── keys_server/
@@ -118,37 +117,23 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   │       ├── __init__.py
     │   │       └── supplier_model_runner.py
     │   ├── oasis_keys_lookup/
+    │   │   ├── docs/
     │   │   ├── OasisBaseKeysLookup.py
     │   │   ├── README.md
-    │   │   ├── __init__.py
-    │   │   └── docs/
-    │   │       ├── Makefile
-    │   │       ├── conf.py
-    │   │       ├── index.rst
-    │   │       ├── introduction.rst
-    │   │       └── make.bat
+    │   │   └── __init__.py
     │   ├── oasis_keys_server/
+    │   │   ├── docs/
     │   │   ├── KeysServer.ini
     │   │   ├── README.md
     │   │   ├── __init__.py
     │   │   ├── app.py
-    │   │   ├── docs/
-    │   │   │   ├── Makefile
-    │   │   │   ├── conf.py
-    │   │   │   ├── index.rst
-    │   │   │   ├── introduction.rst
-    │   │   │   └── make.bat
     │   │   ├── requirements.txt
     │   │   ├── startup.sh
     │   │   └── utils.py
     │   └── oasis_utils/
+    │       ├── docs/
+    │       ├── README.md
     │       ├── __init__.py
-    │       ├── docs/
-    │       │   ├── Makefile
-    │       │   ├── conf.py
-    │       │   ├── index.rst
-    │       │   ├── introduction.rst
-    │       │   └── make.bat
     │       ├── oasis_db_utils.py
     │       ├── oasis_log_utils.py
     │       ├── oasis_sys_utils.py
@@ -156,5 +141,3 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       └── requirements.txt
     └── tests/
         └── tests.py
-
-    25 directories, 95 files
