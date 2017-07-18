@@ -7,7 +7,6 @@ from subprocess import check_call
 
 OASIS_GIT_SUBMODULES = {
     'oasis_utils': 'git+ssh://git@github.com/OasisLMF/oasis_utils',
-    'oasis_keys_lookup': 'git+ssh://git@github.com/OasisLMF/oasis_keys_lookup',
     'oasis_keys_server': 'git+ssh://git@github.com/OasisLMF/oasis_keys_server',
     'oasis_build_utils': 'git+ssh://git@github.com/OasisLMF/oasis_build_utils'
 
