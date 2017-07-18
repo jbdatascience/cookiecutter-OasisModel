@@ -43,7 +43,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── flamingo/
     │   └── generic_model/
     │       ├── Files/
-    │       ├── MappingFiles
+    │       ├── MappingFiles/
     │       │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
     │       │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
     │       │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
@@ -116,24 +116,22 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   │   └── OasisModel/
     │   │       ├── __init__.py
     │   │       └── supplier_model_runner.py
-    │   ├── oasis_keys_lookup/
-    │   │   ├── docs/
-    │   │   ├── OasisBaseKeysLookup.py
-    │   │   ├── README.md
-    │   │   └── __init__.py
     │   ├── oasis_keys_server/
-    │   │   ├── docs/
     │   │   ├── KeysServer.ini
     │   │   ├── README.md
     │   │   ├── __init__.py
     │   │   ├── app.py
+    │   │   ├── docs/
+    │   │   ├── oasis_keys_lookup/
+    │   │   │   ├── OasisBaseKeysLookup.py
+    │   │   │   └── __init__.py
     │   │   ├── requirements.txt
     │   │   ├── startup.sh
     │   │   └── utils.py
     │   └── oasis_utils/
-    │       ├── docs/
     │       ├── README.md
     │       ├── __init__.py
+    │       ├── docs/
     │       ├── oasis_db_utils.py
     │       ├── oasis_log_utils.py
     │       ├── oasis_sys_utils.py
