@@ -4,30 +4,46 @@ RUN apt update && apt install -y apache2 \
                        apache2-utils \
                        libapache2-mod-wsgi \
                        python-flask \
+                       libgeos-dev \
                        unixodbc \
                        unixodbc-dev
 
 RUN mkdir /var/www/oasis
-RUN mkdir /var/www/oasis/keys_server
 RUN mkdir /var/oasis
+
 RUN mkdir /var/log/oasis
 RUN chown www-data:www-data /var/log/oasis
-RUN chmod 777 /var/log/oasis
+RUN chmod 744 /var/log/oasis
 RUN touch /var/log/oasis/keys_server.log
 RUN chown www-data:www-data /var/log/oasis/keys_server.log
-RUN chmod 666 /var/log/oasis/keys_server.log
+RUN chmod 644 /var/log/oasis/keys_server.log
 
 COPY ./keys_server_config/apache2.conf /etc/apache2/apache2.conf
 COPY ./keys_server_config/oasis.conf /etc/apache2/sites-available/oasis.conf
 COPY ./keys_server_config/oasis.wsgi /var/www/oasis/oasis.wsgi
+
 COPY ./src/oasis_utils /var/www/oasis/oasis_utils/
+RUN rm -fr /var/www/oasis/oasis_utils/docs
+RUN rm -fr /var/www/oasis/oasis_utils/venv
+
 COPY ./src/oasis_keys_lookup /var/www/oasis/oasis_keys_lookup/
+RUN rm -fr /var/www/oasis/oasis_keys_lookup/docs
+RUN rm -fr /var/www/oasis/oasis_keys_lookup/venv
+
+COPY ./src/oasis_keys_server /var/www/oasis/oasis_keys_server/
+RUN rm -fr /var/www/oasis/oasis_keys_server/docs
+RUN rm -fr /var/www/oasis/oasis_keys_server/venv
+
 COPY ./src/keys_server /var/www/oasis/keys_server/
 COPY ./src/oasis_keys_server /var/www/oasis/oasis_keys_server/
 
+
+RUN mkdir /var/oasis/keys_data
+RUN chown www-data:www-data /var/oasis/keys_data
+RUN chmod 744 /var/oasis/keys_data
 COPY ./keys_data /var/oasis/keys_data
 COPY ./keys_data/{{cookiecutter.model_identifier.replace(' ', '').upper()}} /var/oasis/keys_data
-RUN chmod -R ugo=rwx /var/oasis/keys_data
+RUN chmod -R 444 /var/oasis/keys_data
 
 COPY ./src/oasis_keys_server/startup.sh  /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup.sh
