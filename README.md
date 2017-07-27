@@ -3,7 +3,7 @@ A cookiecutter project structure for Oasis models that can be replicated using t
 
 ## First steps
 
-Install the cookiecutter tool (if not present):
+Install cookiecutter (if not present):
 
     /home/foo$ pip install cookiecutter
     
