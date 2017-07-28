@@ -1,11 +1,21 @@
 {{cookiecutter.organization}} {{cookiecutter.model_identifier.upper()}} Model README
 ====================================================================================
 
-To clone this repository first ensure that you have generated an SSH key pair on your local machine and add the public key of that pair to your GitHub account (there is a GitHub guide for this at https://help.github.com/articles/connecting-to-github-with-ssh/). Then run
+## Cloning the repository
+
+You can clone this repository using HTTPS or SSH, but it is recommended that that you use SSH: first ensure that you have generated an SSH key pair on your local machine and add the public key of that pair to your GitHub account (use the GitHub guide at https://help.github.com/articles/connecting-to-github-with-ssh/). Then run
 
     git clone --recursive git+ssh://git@github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}
 
-The `--recursive` option ensures the cloned repository contains the necessary Oasis repositories <a href="https://github.com/OasisLMF/oasis_utils" target="_blank">`oasis_utils`</a>, <a href="https://github.com/OasisLMF/oasis_keys_lookup" target="_blank">`oasis_keys_lookup`</a>, <a href="https://github.com/OasisLMF/oasis_keys_server" target="_blank">`oasis_keys_server`</a> and <a href="https://github.com/OasisLMF/oasis_build_utils" target="_blank">`oasis_build_utils`</a> as Git submodules. You have read only access to these repositories.
+To clone over HTTPS use
+
+    git clone --recursive https://github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}.git
+
+You may receive a password prompt - to bypass the password prompt use
+
+    git clone --recursive https://<GitHub user name:GitHub password>@github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}.git
+
+The `--recursive` option ensures the cloned repository contains the necessary Oasis repositories <a href="https://github.com/OasisLMF/oasis_utils" target="_blank">`oasis_utils`</a>, <a href="https://github.com/OasisLMF/oasis_keys_server" target="_blank">`oasis_keys_server`</a> and <a href="https://github.com/OasisLMF/oasis_build_utils" target="_blank">`oasis_build_utils`</a> as Git submodules. You have read only access to these repositories.
 
 
 ## Managing the submodules
