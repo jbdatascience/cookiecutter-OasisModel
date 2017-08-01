@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'cookiecutter-OasisModel'
-copyright = u'2017, Oasis Loss Modelling Framework'
+copyright = u'2017, Oasis Loss Modelling Framework (v. 0.6, 31 July, 2017).'
 author = u'Sandeep Murthy'
 
 # The version info for the project you're documenting, acts as replacement for
