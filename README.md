@@ -59,39 +59,39 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── flamingo/
     │   └── generic_model/
     │       ├── Files/
-    │       ├── MappingFiles/
-    │       │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
-    │       │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
-    │       │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
-    │       │   ├── Generic_Flood_SourceLocToCanLoc_A.mfd
-    │       │   ├── Generic_SourceAccToCanAcc_A.mfd
-    │       │   ├── Generic_Windstorm_CanLoc_BToModelLoc.mfd
-    │       │   └── Generic_Windstorm_SourceLocToCanLoc_A.mfd
-    │       ├── SQLFiles/
-    │       ├── TransformationFiles/
-    │       │   ├── MappingMapToGeneric_CanAcc_A.xslt
-    │       │   ├── MappingMapToGeneric_Earthquake_CanLoc_A.xslt
-    │       │   ├── MappingMapToGeneric_Earthquake_ModelLoc.xslt
-    │       │   ├── MappingMapToGeneric_Flood_CanLoc_A.xslt
-    │       │   ├── MappingMapToGeneric_Flood_ModelLoc.xslt
-    │       │   ├── MappingMapToGeneric_Windstorm_CanLoc_A.xslt
-    │       │   └── MappingMapToGeneric_Windstorm_ModelLoc.xslt
-    │       └── ValidationFiles/
-    │           ├── Generic_CanAcc_A.xsd
-    │           ├── Generic_CanAcc_B.xsd
-    │           ├── Generic_Earthquake_CanLoc_A.xsd
-    │           ├── Generic_Earthquake_CanLoc_B.xsd
-    │           ├── Generic_Earthquake_ModelLoc.xsd
-    │           ├── Generic_Earthquake_SourceLoc.xsd
-    │           ├── Generic_Flood_CanLoc_A.xsd
-    │           ├── Generic_Flood_CanLoc_B.xsd
-    │           ├── Generic_Flood_ModelLoc.xsd
-    │           ├── Generic_Flood_SourceLoc.xsd
-    │           ├── Generic_SourceAcc.xsd
-    │           ├── Generic_Windstorm_CanLoc_A.xsd
-    │           ├── Generic_Windstorm_CanLoc_B.xsd
-    │           ├── Generic_Windstorm_ModelLoc.xsd
-    │           └── Generic_Windstorm_SourceLoc.xsd
+    │       │   ├── MappingFiles/
+    │       │   │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
+    │       │   │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
+    │       │   │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
+    │       │   │   ├── Generic_Flood_SourceLocToCanLoc_A.mfd
+    │       │   │   ├── Generic_SourceAccToCanAcc_A.mfd
+    │       │   │   ├── Generic_Windstorm_CanLoc_BToModelLoc.mfd
+    │       │   │   └── Generic_Windstorm_SourceLocToCanLoc_A.mfd
+    │       │   ├── TransformationFiles/
+    │       │   │   ├── MappingMapToGeneric_CanAcc_A.xslt
+    │       │   │   ├── MappingMapToGeneric_Earthquake_CanLoc_A.xslt
+    │       │   │   ├── MappingMapToGeneric_Earthquake_ModelLoc.xslt
+    │       │   │   ├── MappingMapToGeneric_Flood_CanLoc_A.xslt
+    │       │   │   ├── MappingMapToGeneric_Flood_ModelLoc.xslt
+    │       │   │   ├── MappingMapToGeneric_Windstorm_CanLoc_A.xslt
+    │       │   │   └── MappingMapToGeneric_Windstorm_ModelLoc.xslt
+    │       │   └── ValidationFiles/
+    │       │       ├── Generic_CanAcc_A.xsd
+    │       │       ├── Generic_CanAcc_B.xsd
+    │       │       ├── Generic_Earthquake_CanLoc_A.xsd
+    │       │       ├── Generic_Earthquake_CanLoc_B.xsd
+    │       │       ├── Generic_Earthquake_ModelLoc.xsd
+    │       │       ├── Generic_Earthquake_SourceLoc.xsd
+    │       │       ├── Generic_Flood_CanLoc_A.xsd
+    │       │       ├── Generic_Flood_CanLoc_B.xsd
+    │       │       ├── Generic_Flood_ModelLoc.xsd
+    │       │       ├── Generic_Flood_SourceLoc.xsd
+    │       │       ├── Generic_SourceAcc.xsd
+    │       │       ├── Generic_Windstorm_CanLoc_A.xsd
+    │       │       ├── Generic_Windstorm_CanLoc_B.xsd
+    │       │       ├── Generic_Windstorm_ModelLoc.xsd
+    │       │       └── Generic_Windstorm_SourceLoc.xsd
+    │       └── SQLFiles/
     ├── keys_data/
     │   └── MODEL/
     │       └── ModelVersion.csv
@@ -137,7 +137,6 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   │   ├── README.md
     │   │   ├── __init__.py
     │   │   ├── app.py
-    │   │   ├── docs/
     │   │   ├── oasis_keys_lookup/
     │   │   │   ├── OasisBaseKeysLookup.py
     │   │   │   └── __init__.py
@@ -147,7 +146,6 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   └── oasis_utils/
     │       ├── README.md
     │       ├── __init__.py
-    │       ├── docs/
     │       ├── oasis_db_utils.py
     │       ├── oasis_log_utils.py
     │       ├── oasis_sys_utils.py
