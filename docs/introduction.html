@@ -42,7 +42,7 @@
   <div class="section" id="cookiecutter-oasismodel">
 <h1>cookiecutter-OasisModel<a class="headerlink" href="#cookiecutter-oasismodel" title="Permalink to this headline">¶</a></h1>
 <p>A cookiecutter project structure for Oasis models that can be replicated
-using the <a class="reference external" href="https://pypi.python.org/pypi/cookiecutter">cookiecutter</a> Python tool.</p>
+using the <code class="docutils literal"><span class="pre">cookiecutter</span></code> Python tool.</p>
 <div class="section" id="cloning-the-repository">
 <h2>Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this headline">¶</a></h2>
 <p>You can clone this repository from GitHub if you are a member of the
@@ -78,15 +78,15 @@ either <code class="docutils literal"><span class="pre">https</span></code> or <
 </div>
 <p>You should see the following prompts for project and model settings in
 sequence (press ENTER to use default values):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">project_name</span> <span class="p">[</span><span class="n">Oasis</span> <span class="n">Model</span><span class="p">]:</span>
-<span class="n">project_slug</span> <span class="p">[</span><span class="n">OasisModel</span><span class="p">]:</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">project_name</span> <span class="p">[</span><span class="n">OM</span><span class="p">]:</span>
+<span class="n">project_slug</span> <span class="p">[</span><span class="n">OM</span><span class="p">]:</span>
 <span class="n">project_short_description</span> <span class="p">[</span><span class="n">Oasis</span> <span class="n">Model</span><span class="p">]:</span>
 <span class="n">version</span> <span class="p">[</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="p">]:</span>
 <span class="n">primary_language</span> <span class="p">[</span><span class="n">Python</span><span class="p">]:</span>
-<span class="n">organization</span> <span class="p">[</span><span class="n">ORG</span><span class="p">]:</span>
-<span class="n">model_identifier</span> <span class="p">[</span><span class="n">MODEL</span><span class="p">]:</span>
+<span class="n">organization</span> <span class="p">[</span><span class="n">OasisLMF</span><span class="p">]:</span>
+<span class="n">model_identifier</span> <span class="p">[</span><span class="n">OM</span><span class="p">]:</span>
 <span class="n">model_version</span> <span class="p">[</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">]:</span>
-<span class="n">email</span> <span class="p">[</span><span class="n">mark</span><span class="o">.</span><span class="n">pinkerton</span><span class="nd">@oasislmf</span><span class="o">.</span><span class="n">org</span><span class="p">]:</span>
+<span class="n">email</span> <span class="p">[</span><span class="n">sandeep</span><span class="o">.</span><span class="n">murthy</span><span class="nd">@oasislmf</span><span class="o">.</span><span class="n">org</span><span class="p">]:</span>
 </pre></div>
 </div>
 <p>These prompts are self-explanatory, but <code class="docutils literal"><span class="pre">project_name</span></code>,
@@ -116,106 +116,108 @@ set during runtime via the prompts, are configurable in the repo file
 <p>For the current state of the <code class="docutils literal"><span class="pre">{{cookiecutter.project_slug}}</span></code>directory you should see the following project structure in the place
 where you ran the command (assuming you used default boilerplate values
 for the project name, organization and model name):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>OasisModel/
-├── Dockerfile.org_model_keys_server
-├── Dockerfile.org_model_model_execution_worker
+<div class="highlight-default"><div class="highlight"><pre><span></span>OM/
+├── Dockerfile.oasislmf_om_keys_server
+├── Dockerfile.oasislmf_om_model_execution_worker
 ├── LICENSE
 ├── README.md
 ├── flamingo/
-│   └── generic_model/
-│       ├── Files/
-│       │   ├── MappingFiles/
-│       │   │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
-│       │   │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
-│       │   │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
-│       │   │   ├── Generic_Flood_SourceLocToCanLoc_A.mfd
-│       │   │   ├── Generic_SourceAccToCanAcc_A.mfd
-│       │   │   ├── Generic_Windstorm_CanLoc_BToModelLoc.mfd
-│       │   │   └── Generic_Windstorm_SourceLocToCanLoc_A.mfd
-│       │   ├── TransformationFiles/
-│       │   │   ├── MappingMapToGeneric_CanAcc_A.xslt
-│       │   │   ├── MappingMapToGeneric_Earthquake_CanLoc_A.xslt
-│       │   │   ├── MappingMapToGeneric_Earthquake_ModelLoc.xslt
-│       │   │   ├── MappingMapToGeneric_Flood_CanLoc_A.xslt
-│       │   │   ├── MappingMapToGeneric_Flood_ModelLoc.xslt
-│       │   │   ├── MappingMapToGeneric_Windstorm_CanLoc_A.xslt
-│       │   │   └── MappingMapToGeneric_Windstorm_ModelLoc.xslt
-│       │   └── ValidationFiles/
-│       │       ├── Generic_CanAcc_A.xsd
-│       │       ├── Generic_CanAcc_B.xsd
-│       │       ├── Generic_Earthquake_CanLoc_A.xsd
-│       │       ├── Generic_Earthquake_CanLoc_B.xsd
-│       │       ├── Generic_Earthquake_ModelLoc.xsd
-│       │       ├── Generic_Earthquake_SourceLoc.xsd
-│       │       ├── Generic_Flood_CanLoc_A.xsd
-│       │       ├── Generic_Flood_CanLoc_B.xsd
-│       │       ├── Generic_Flood_ModelLoc.xsd
-│       │       ├── Generic_Flood_SourceLoc.xsd
-│       │       ├── Generic_SourceAcc.xsd
-│       │       ├── Generic_Windstorm_CanLoc_A.xsd
-│       │       ├── Generic_Windstorm_CanLoc_B.xsd
-│       │       ├── Generic_Windstorm_ModelLoc.xsd
-│       │       └── Generic_Windstorm_SourceLoc.xsd
-│       └── SQLFiles/
+│   └── generic_model/
+│       ├── Files/
+│       │   ├── MappingFiles/
+│       │   │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
+│       │   │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
+│       │   │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
+│       │   │   ├── Generic_Flood_SourceLocToCanLoc_A.mfd
+│       │   │   ├── Generic_SourceAccToCanAcc_A.mfd
+│       │   │   ├── Generic_Windstorm_CanLoc_BToModelLoc.mfd
+│       │   │   └── Generic_Windstorm_SourceLocToCanLoc_A.mfd
+│       │   ├── TransformationFiles/
+│       │   │   ├── MappingMapToGeneric_CanAcc_A.xslt
+│       │   │   ├── MappingMapToGeneric_Earthquake_CanLoc_A.xslt
+│       │   │   ├── MappingMapToGeneric_Earthquake_ModelLoc.xslt
+│       │   │   ├── MappingMapToGeneric_Flood_CanLoc_A.xslt
+│       │   │   ├── MappingMapToGeneric_Flood_ModelLoc.xslt
+│       │   │   ├── MappingMapToGeneric_Windstorm_CanLoc_A.xslt
+│       │   │   └── MappingMapToGeneric_Windstorm_ModelLoc.xslt
+│       │   └── ValidationFiles/
+│       │       ├── Generic_CanAcc_A.xsd
+│       │       ├── Generic_CanAcc_B.xsd
+│       │       ├── Generic_Earthquake_CanLoc_A.xsd
+│       │       ├── Generic_Earthquake_CanLoc_B.xsd
+│       │       ├── Generic_Earthquake_ModelLoc.xsd
+│       │       ├── Generic_Earthquake_SourceLoc.xsd
+│       │       ├── Generic_Flood_CanLoc_A.xsd
+│       │       ├── Generic_Flood_CanLoc_B.xsd
+│       │       ├── Generic_Flood_ModelLoc.xsd
+│       │       ├── Generic_Flood_SourceLoc.xsd
+│       │       ├── Generic_SourceAcc.xsd
+│       │       ├── Generic_Windstorm_CanLoc_A.xsd
+│       │       ├── Generic_Windstorm_CanLoc_B.xsd
+│       │       ├── Generic_Windstorm_ModelLoc.xsd
+│       │       └── Generic_Windstorm_SourceLoc.xsd
+│       └── SQLFiles/
 ├── keys_data/
-│   └── MODEL/
-│       └── ModelVersion.csv
+│   └── OM/
+│       └── ModelVersion.csv
 ├── keys_server_config/
-│   ├── apache2.conf
-│   ├── oasis.conf
-│   └── oasis.wsgi
+│   ├── apache2.conf
+│   ├── oasis.conf
+│   └── oasis.wsgi
 ├── model_data/
-│   └── MODEL/
-│       ├── ModelVersion.csv
-│       ├── damage_bin_dict.bin
-│       ├── damage_bin_dict.csv
-│       ├── data.csv
-│       ├── events.bin
-│       ├── events.csv
-│       ├── footprint.bin
-│       ├── footprint.csv
-│       ├── footprint.idx
-│       ├── occurrence.bin
-│       ├── occurrence.csv
-│       ├── random.bin
-│       ├── random.csv
-│       ├── returnperiods.bin
-│       ├── returnperiods.csv
-│       ├── vulnerability.bin
-│       └── vulnerability.csv
+│   └── OM/
+│       ├── ModelVersion.csv
+│       ├── damage_bin_dict.bin
+│       ├── damage_bin_dict.csv
+│       ├── data.csv
+│       ├── events.bin
+│       ├── events.csv
+│       ├── footprint.bin
+│       ├── footprint.csv
+│       ├── footprint.idx
+│       ├── occurrence.bin
+│       ├── occurrence.csv
+│       ├── random.bin
+│       ├── random.csv
+│       ├── returnperiods.bin
+│       ├── returnperiods.csv
+│       ├── vulnerability.bin
+│       └── vulnerability.csv
 ├── oasis_build_utils/
-│   └── keys_server_build_utils.sh
-├── org_model_keys_server_build_config
+│   └── keys_server_build_utils.sh
+├── oasislmf_om_keys_server_build_config
 ├── src/
-│   ├── keys_server/
-│   │   ├── MODELKeysLookup.py
-│   │   ├── __init__.py
-│   │   ├── requirements.txt
-│   │   └── utils/
-│   │       └── __init__.py
-│   ├── model_execution_worker/
-│   │   └── OasisModel/
-│   │       ├── __init__.py
-│   │       └── supplier_model_runner.py
-│   ├── oasis_keys_server/
-│   │   ├── KeysServer.ini
-│   │   ├── README.md
-│   │   ├── __init__.py
-│   │   ├── app.py
-│   │   ├── oasis_keys_lookup/
-│   │   │   ├── OasisBaseKeysLookup.py
-│   │   │   └── __init__.py
-│   │   ├── requirements.txt
-│   │   ├── startup.sh
-│   │   └── utils.py
-│   └── oasis_utils/
-│       ├── README.md
-│       ├── __init__.py
-│       ├── oasis_db_utils.py
-│       ├── oasis_log_utils.py
-│       ├── oasis_sys_utils.py
-│       ├── oasis_utils.py
-│       └── requirements.txt
+│   ├── keys_server/
+│   │   ├── OMKeysLookup.py
+│   │   ├── __init__.py
+│   │   ├── requirements.txt
+│   │   └── utils/
+│   │       └── __init__.py
+│   ├── model_execution_worker/
+│   │   └── OM/
+│   │       ├── __init__.py
+│   │       └── supplier_model_runner.py
+│   ├── oasis_keys_server/
+│   │   ├── KeysServer.ini
+│   │   ├── README.md
+│   │   ├── __init__.py
+│   │   ├── app.py
+│   │   ├── docs/
+│   │   ├── oasis_keys_lookup/
+│   │   │   ├── OasisBaseKeysLookup.py
+│   │   │   └── __init__.py
+│   │   ├── requirements.txt
+│   │   ├── startup.sh
+│   │   └── utils.py
+│   └── oasis_utils/
+│       ├── README.md
+│       ├── __init__.py
+│       ├── docs/
+│       ├── oasis_db_utils.py
+│       ├── oasis_log_utils.py
+│       ├── oasis_sys_utils.py
+│       ├── oasis_utils.py
+│       └── requirements.txt
 └── tests/
     └── tests.py
 </pre></div>
