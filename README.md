@@ -29,15 +29,15 @@ Run cookiecutter on the source repo (the URI can be specified using either `http
 
 You should see the following prompts for project and model settings in sequence (press ENTER to use default values):
     
-    project_name [Oasis Model]:
-    project_slug [OasisModel]: 
-    project_short_description [Oasis Model]:
+    project_name [OM]: 
+    project_slug [OM]: 
+    project_short_description [Oasis Model]: 
     version [0.0.1]: 
     primary_language [Python]: 
-    organization [ORG]:
-    model_identifier [MODEL]:
+    organization [OasisLMF]: 
+    model_identifier [OM]: 
     model_version [0.0.0.1]: 
-    email [mark.pinkerton@oasislmf.org]: 
+    email [sandeep.murthy@oasislmf.org]: 
 
 These prompts are self-explanatory, but `project_name`, `project_slug`, `organization`, `model_identifier` and `model_version` are mandatory, while the others are optional. Here are some guidelines to follow for the mandatory prompts.
 
@@ -51,9 +51,9 @@ The project structure is contained in the repo folder named <a href="https://git
 
 For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-OasisModel/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D" target="_blank">`{{cookiecutter.project_slug}}`</a> directory you should see the following project structure in the place where you ran the command (assuming you used default boilerplate values for the project name, organization and model name):
 
-    OasisModel/
-    ├── Dockerfile.org_model_keys_server
-    ├── Dockerfile.org_model_model_execution_worker
+    OM/
+    ├── Dockerfile.oasislmf_om_keys_server
+    ├── Dockerfile.oasislmf_om_model_execution_worker
     ├── LICENSE
     ├── README.md
     ├── flamingo/
@@ -93,14 +93,14 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       │       └── Generic_Windstorm_SourceLoc.xsd
     │       └── SQLFiles/
     ├── keys_data/
-    │   └── MODEL/
+    │   └── OM/
     │       └── ModelVersion.csv
     ├── keys_server_config/
     │   ├── apache2.conf
     │   ├── oasis.conf
     │   └── oasis.wsgi
     ├── model_data/
-    │   └── MODEL/
+    │   └── OM/
     │       ├── ModelVersion.csv
     │       ├── damage_bin_dict.bin
     │       ├── damage_bin_dict.csv
@@ -120,16 +120,16 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       └── vulnerability.csv
     ├── oasis_build_utils/
     │   └── keys_server_build_utils.sh
-    ├── org_model_keys_server_build_config
+    ├── oasislmf_om_keys_server_build_config
     ├── src/
     │   ├── keys_server/
-    │   │   ├── MODELKeysLookup.py
+    │   │   ├── OMKeysLookup.py
     │   │   ├── __init__.py
     │   │   ├── requirements.txt
     │   │   └── utils/
     │   │       └── __init__.py
     │   ├── model_execution_worker/
-    │   │   └── OasisModel/
+    │   │   └── OM/
     │   │       ├── __init__.py
     │   │       └── supplier_model_runner.py
     │   ├── oasis_keys_server/
@@ -137,6 +137,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   │   ├── README.md
     │   │   ├── __init__.py
     │   │   ├── app.py
+    │   │   ├── docs/
     │   │   ├── oasis_keys_lookup/
     │   │   │   ├── OasisBaseKeysLookup.py
     │   │   │   └── __init__.py
@@ -146,6 +147,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   └── oasis_utils/
     │       ├── README.md
     │       ├── __init__.py
+    │       ├── docs/
     │       ├── oasis_db_utils.py
     │       ├── oasis_log_utils.py
     │       ├── oasis_sys_utils.py
