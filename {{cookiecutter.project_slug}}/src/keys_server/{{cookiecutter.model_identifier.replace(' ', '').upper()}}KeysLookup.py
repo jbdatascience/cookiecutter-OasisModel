@@ -13,15 +13,16 @@ import os
 # Python 2 non-standard library imports
 
 # Oasis utils and other Oasis imports
+
+from oasis_keys_server.oasis_keys_lookup import OasisBaseKeysLookup
+
 from oasis_utils import (
     oasis_utils,
     oasis_log_utils,
 )
 
-from oasis_keys_lookup import OasisBaseKeysLookup
-
 # Model keys server imports
-from utils import *
+from .utils import *
 
 class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(OasisBaseKeysLookup):
     """
