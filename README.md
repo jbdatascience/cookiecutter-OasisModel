@@ -37,7 +37,7 @@ You should see the following prompts for project and model settings in sequence 
     organization [OasisLMF]: 
     model_identifier [OM]: 
     model_version [0.0.0.1]: 
-    email [sandeep.murthy@oasislmf.org]: 
+    email [<your email>]: 
 
 These prompts are self-explanatory, but `project_name`, `project_slug`, `organization`, `model_identifier` and `model_version` are mandatory, while the others are optional. Here are some guidelines to follow for the mandatory prompts.
 
