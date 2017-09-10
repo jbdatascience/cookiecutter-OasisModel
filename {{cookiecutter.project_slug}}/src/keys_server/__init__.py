@@ -1,5 +1,5 @@
-'''
-Module initialiser.
-'''
-from utils import *
-from .{{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup import *
+"""
+Package initialiser.
+"""
+from .utils import *
+from .{{cookiecutter.model_identifier.replace(' ', '').upper()}} import *
