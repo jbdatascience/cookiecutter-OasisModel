@@ -1,3 +1,3 @@
 """
-Utilities for {{cookiecutter.model_identifider.replace(' ', '').upper()}} model
+Utilities for {{cookiecutter.model_identifier.replace(' ', '').upper()}} model
 """
