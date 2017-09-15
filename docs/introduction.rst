@@ -172,7 +172,9 @@ for the project name, organization and model name):
     │   │   │   ├── __init__.py
     │   │   │   ├── requirements.txt
     │   │   │   └── utils.py
+    │   │   ├── OasisBaseKeysLookup.py
     │   │   ├── __init__.py
+    │   │   ├── __init__.py.base
     │   │   ├── requirements.txt
     │   │   └── utils.py
     │   ├── model_execution_worker/
@@ -195,6 +197,7 @@ for the project name, organization and model name):
     │       ├── README.md
     │       ├── __init__.py
     │       ├── docs/
+    │       ├── lookup_service_cli.py
     │       ├── oasis_db_utils.py
     │       ├── oasis_log_utils.py
     │       ├── oasis_sys_utils.py
