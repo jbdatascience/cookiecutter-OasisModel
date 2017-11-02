@@ -14,7 +14,7 @@ import os
 
 # Oasis utils and other Oasis imports
 
-from .OasisBaseKeysLookup import OasisBaseKeysLookup
+from keys_server import OasisBaseKeysLookup
 
 from oasis_utils import (
     oasis_utils,
