@@ -32,12 +32,13 @@ You should see the following prompts for project and model settings in sequence 
     project_name [OM]: 
     project_slug [OM]: 
     project_short_description [Oasis Model]: 
+    project_maintainer [<full name of primary project maintainer>]: Sandeep Murthy
+    project_maintainer_email [<primary GitHub account email of primary project maintainer>]: smurthy@protonmail.ch
     version [0.0.1]: 
     primary_language [Python]: 
     organization [OasisLMF]: 
     model_identifier [OM]: 
     model_version [0.0.0.1]: 
-    email [<your email>]: 
 
 These prompts are self-explanatory, but `project_name`, `project_slug`, `organization`, `model_identifier` and `model_version` are mandatory, while the others are optional. Here are some guidelines to follow for the mandatory prompts.
 
