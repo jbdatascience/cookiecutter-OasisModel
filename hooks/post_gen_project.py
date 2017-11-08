@@ -3,7 +3,10 @@
 import os
 import time
 
-from subprocess import check_call
+from subprocess import (
+    check_call,
+    check_output,
+)
 
 OASIS_GIT_SUBMODULES = {
     'oasis_utils': 'git+ssh://git@github.com/OasisLMF/oasis_utils',
@@ -45,12 +48,10 @@ def add_static_base_lookup_module_to_keys_server_subpackage():
 if __name__ == '__main__':
     cwd = os.getcwd()
 
-    print('Setting up Git user and email in config.')
+    print('\nSetting up Git user and email in global config.')
     time.sleep(2)
     setup_git_user()
-    print(
-        '\n\tuser="{}", email="{}".\n'.format(check_call(['git', 'config', '--global', 'user.name']), check_call(['git', 'config', '--global', 'user.email']))
-    )
+    print('\n\tuser={}, email={}'.format(check_output(['git', 'config', '--global', 'user.name']), check_output(['git', 'config', '--global', 'user.email'])))
     time.sleep(3)
 
     print('\nCreating Git repo in {}.\n'.format(cwd))
