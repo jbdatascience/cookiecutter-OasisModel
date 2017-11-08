@@ -12,6 +12,10 @@ OASIS_GIT_SUBMODULES = {
 
 }
 
+def setup_git_user():
+    check_call(['git', 'config', '--global', 'user.name', '"{{cookiecutter.project_maintainer}}"'])
+    check_call(['git', 'config', '--global', 'user.email', '"{{cookiecutter.project_maintainer_email}}"'])
+
 
 def create_git_repo():
     check_call(['git', 'init'])
@@ -40,6 +44,15 @@ def add_static_base_lookup_module_to_keys_server_subpackage():
 
 if __name__ == '__main__':
     cwd = os.getcwd()
+
+    print('Setting up Git user and email in config.')
+    time.sleep(2)
+    setup_git_user()
+    print(
+        '\n\tuser="{}", email="{}".\n'.format(check_call(['git', 'config', '--global', 'user.name']), check_call(['git', 'config', '--global', 'user.email']))
+    )
+    time.sleep(3)
+
     print('\nCreating Git repo in {}.\n'.format(cwd))
     time.sleep(2)
     create_git_repo()
