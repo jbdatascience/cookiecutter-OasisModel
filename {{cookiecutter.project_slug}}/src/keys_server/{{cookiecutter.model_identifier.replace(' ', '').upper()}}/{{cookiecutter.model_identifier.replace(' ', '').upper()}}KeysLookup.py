@@ -44,13 +44,8 @@ class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(Oasis
     
     
     @oasis_log_utils.oasis_log()
-    def process_locations(self, loc_data, mime_type=oasis_utils.MIME_TYPE_CSV):
+    def process_locations(self, loc_df):
         """
-        Read in rows from the model location file in the request CSV data and generate
-        exposure records. This is the main method to override in each model
-        keys lookup class. Other methods inherited from the superclass
-        BaseKeysLookup can also be used, please refer to the source:
-        
-        https://github.com/OasisLMF/oasis_keys_server/oasis_keys_lookup/blob/master/OasisBaseKeysLookup.py
+        Process location rows - passed in as a pandas dataframe.
         """
         pass
