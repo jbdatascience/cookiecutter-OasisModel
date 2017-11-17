@@ -35,9 +35,11 @@ def add_git_submodules():
             ]
         )
 
+
 def commit_git_submodules():
     check_call(['git', 'add', '-A'])
     check_call(['git', 'commit', '-m', 'Commit for Git submodules'])
+
 
 def add_static_base_lookup_module_to_keys_server_subpackage():
     check_call(['cp', os.path.join('src', 'oasis_keys_server', 'oasis_keys_lookup', 'OasisBaseKeysLookup.py'), os.path.join('src', 'keys_server')])
