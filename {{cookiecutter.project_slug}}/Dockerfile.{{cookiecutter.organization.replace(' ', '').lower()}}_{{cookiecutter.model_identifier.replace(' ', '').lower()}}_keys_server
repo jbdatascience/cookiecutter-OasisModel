@@ -40,6 +40,7 @@ COPY ./src/oasis_keys_server/oasis_keys_lookup/OasisBaseKeysLookup.py /var/www/o
 COPY ./src/keys_server/utils.py /var/www/oasis/keys_server/utils.py
 COPY ./src/keys_server/requirements.txt /var/www/oasis/keys_server/requirements.txt
 COPY ./src/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}} /var/www/oasis/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}}
+COPY ./src/keys_server/KeysServer.ini /var/www/oasis_keys_server/
 
 RUN mkdir /var/oasis/keys_data
 RUN chown www-data:www-data /var/oasis/keys_data
