@@ -64,7 +64,7 @@ if __name__ == '__main__':
     time.sleep(2)
     add_git_submodules()
 
-    print('\nCommiting Git submodules.\n')
+    print('\nCommitting Git submodules.\n')
     time.sleep(2)
     commit_git_submodules()
 
