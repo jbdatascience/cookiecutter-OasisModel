@@ -168,12 +168,13 @@ for the project name, organization and model name):
     ├── oasislmf_om_keys_server_build_config
     ├── src/
     │   ├── keys_server/
+    │   │   ├── KeysServer.ini
     │   │   ├── OM/
     │   │   │   ├── OMKeysLookup.py
     │   │   │   ├── __init__.py
     │   │   │   ├── requirements.txt
     │   │   │   └── utils.py
-    │   │   ├── OasisBaseKeysLookup.py
+    │   │   ├── OasisBaseKeysLookup.py/
     │   │   ├── __init__.py
     │   │   ├── __init__.py.base
     │   │   ├── requirements.txt
@@ -198,11 +199,13 @@ for the project name, organization and model name):
     │       ├── README.md
     │       ├── __init__.py
     │       ├── docs/
-    │       ├── lookup_service_cli.py
+    │       ├── exceptions.py
     │       ├── oasis_db_utils.py
+    │       ├── oasis_keys_lookup_service_utils.py
     │       ├── oasis_log_utils.py
     │       ├── oasis_sys_utils.py
     │       ├── oasis_utils.py
     │       └── requirements.txt
     └── tests/
         └── tests.py
+    
