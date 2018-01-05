@@ -56,8 +56,8 @@ sequence (press ENTER to use default values):
     project_name [OM]: 
     project_slug [OM]: 
     project_short_description [Oasis Model]: 
-    project_maintainer [<full name of primary project maintainer>]: Sandeep Murthy
-    project_maintainer_email [<primary GitHub account email of primary project maintainer>]: smurthy@protonmail.ch
+    project_maintainer [<full name of primary project maintainer>]: 
+    project_maintainer_email [<primary GitHub account email of primary project maintainer>]: 
     version [0.0.1]: 
     primary_language [Python]: 
     organization [OasisLMF]: 
