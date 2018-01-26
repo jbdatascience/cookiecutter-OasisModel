@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:16.04
 
 RUN apt update && apt upgrade -y && apt install -y apache2 \
                        apache2-utils \
@@ -30,6 +30,7 @@ RUN rm -fr /var/www/oasis/oasis_utils/docs
 RUN rm -fr /var/www/oasis/oasis_utils/venv
 
 COPY ./src/oasis_keys_server /var/www/oasis/oasis_keys_server/
+COPY ./src/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/KeysServer.ini /var/www/oasis/oasis_keys_server/
 RUN rm -fr /var/www/oasis/oasis_keys_server/docs
 RUN rm -fr /var/www/oasis/oasis_keys_server/venv
 
