@@ -124,8 +124,8 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── oasislmf_om_keys_server_build_config
     ├── src/
     │   ├── keys_server/
-    │   │   ├── KeysServer.ini
     │   │   ├── OM/
+    │   │   │   ├── KeysServer.ini
     │   │   │   ├── OMKeysLookup.py
     │   │   │   ├── __init__.py
     │   │   │   ├── requirements.txt
