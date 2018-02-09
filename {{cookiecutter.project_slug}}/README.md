@@ -9,16 +9,11 @@ You can clone this repository using HTTPS or SSH, but it is recommended that tha
 
 To clone over HTTPS use
 
-    git clone --recursive https://github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}.git
-
-You may receive a password prompt - to bypass the password prompt use
-
-    git clone --recursive https://<GitHub user name:GitHub password>@github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}.git
-
-The `--recursive` option ensures the cloned repository contains the necessary Oasis repositories <a href="https://github.com/OasisLMF/oasis_utils" target="_blank">`oasis_utils`</a>, <a href="https://github.com/OasisLMF/oasis_keys_server" target="_blank">`oasis_keys_server`</a> and <a href="https://github.com/OasisLMF/oasis_build_utils" target="_blank">`oasis_build_utils`</a> as Git submodules. You have read only access to these repositories.
-
+    git clone --recursive https://github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}
 
 ## Managing the submodules
+
+There are three submodules - `src/oasis_keys_server` which contains the Flask app that handles the keys requests dispatched to the model lookup services, `src/oasis_utils` which contains various Python utilities used by the Flask app and also the model lookup services, and `oasis_build_utils`, which contains a Bash script and utilities for building keys server Docker images and running them in Docker containers.
 
 Run the command
 
@@ -52,7 +47,11 @@ To use the shell script first load the build configuration file for the keys ser
 
     . oasis_build_utils/keys_server_build_utils.sh <keys server build config file name>
 
-This loads build parameters needed by the script, such as the supplier, model name, version, path to the keys data files etc. - if there are errors or missing parameters please change the build config file and run the same command again. Then run
+This loads build parameters needed by the script, such as the supplier, model name, version, path to the keys data files etc. - if there are errors or missing parameters please change the build config file and run the same command again. Every model should have its own build configuration file with the following name format (all lowercase)
+
+    <supplier ID>_<model ID>_keys_server_build_config
+
+Then run
 
     start_keys_server
 
@@ -75,3 +74,40 @@ You should get a response of `OK` if the keys server has initialised and is runn
     docker exec -it <container name> bash
 
 The log files to check are `/var/log/apache/error.log` (Apache error log), `/var/log/apache/access.log` (Apache request log), and `/var/log/oasis/keys_server.log` (the keys server Python log). In case of request timeout issues you can edit the `Timeout` option value (in seconds) in the file `/etc/apache2/sites-available/oasis.conf` and restart Apache (`service apache2 restart`).
+
+## Testing the keys server
+
+The `./src/oasis_keys_server` submodule contains a set of Python test cases which you can run against a locally running keys server for a defined model. The tests require configuration information which can be found in an INI file `KeysServerTests.ini` located in `./tests/keys_server_tests/data/<model ID>`. This file defines some files and keys server properties needed to run the tests.
+
+    [Default]
+
+    MODEL_VERSION_FILE_PATH=/path/to/your/{{cookiecutter.organization.replace(' ', '')}}/tests/keys_server_tests/data/<model ID>/ModelVersion.csv
+
+    SAMPLE_CSV_MODEL_EXPOSURES_FILE_PATH=/path/to/your/{{cookiecutter.organization.replace(' ', '')}}/tests/keys_server_tests/data/<model ID>/<model loc. test CSV file>
+
+    SAMPLE_JSON_MODEL_EXPOSURES_FILE_PATH=/path/to/your/{{cookiecutter.organization.replace(' ', '')}}/tests/keys_server_tests/data/<model ID>/<model loc. test JSON file>
+
+    KEYS_SERVER_HOSTNAME_OR_IP=localhost
+
+    KEYS_SERVER_PORT=5000
+
+Make sure the paths exist and the server hostname/IP and port are correct. Then copy the INI file (`./tests/keys_server_tests/data/<model ID>/KeysServerTests.ini`) to `./src/oasis_keys_server/tests` and then run
+
+    python -m unittest -v KeysServerTests
+
+You should see the tests passing
+
+    test_healthcheck (KeysServerTests.KeysServerTests) ... ok
+    test_keys_request_csv (KeysServerTests.KeysServerTests) ... ok
+    test_keys_request_csv__invalid_content_type (KeysServerTests.KeysServerTests) ... ok
+    test_keys_request_json (KeysServerTests.KeysServerTests) ... ok
+    test_keys_request_json__invalid_content_type (KeysServerTests.KeysServerTests) ... ok
+
+    ----------------------------------------------------------------------
+    Ran 5 tests in 0.250s
+
+    OK
+
+To run individual test cases you can use
+
+    python -m unittest -v KeysServerTests.KeysServerTests.<test case name>
