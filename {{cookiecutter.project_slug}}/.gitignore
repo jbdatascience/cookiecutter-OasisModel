@@ -97,8 +97,3 @@ python_boilerplate/
 
 # Virtualenv
 venv/
-
-# top-level CSV and JSON files
-*.csv
-*.json
-
