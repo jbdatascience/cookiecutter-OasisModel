@@ -125,12 +125,12 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     ├── src/
     │   ├── keys_server/
     │   │   ├── OM/
-    │   │   │   ├── KeysServer.ini
+    │   │   │   ├── KeysServer.ini
     │   │   │   ├── OMKeysLookup.py
     │   │   │   ├── __init__.py
     │   │   │   ├── requirements.txt
     │   │   │   └── utils.py
-    │   │   ├── OasisBaseKeysLookup.py/
+    │   │   ├── OasisBaseKeysLookup.py
     │   │   ├── __init__.py
     │   │   ├── __init__.py.base
     │   │   ├── requirements.txt
@@ -141,6 +141,7 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   │       └── supplier_model_runner.py
     │   ├── oasis_keys_server/
     │   │   ├── KeysServer.ini
+    │   │   ├── LICENSE
     │   │   ├── README.md
     │   │   ├── __init__.py
     │   │   ├── app.py
@@ -150,17 +151,27 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   │   │   └── __init__.py
     │   │   ├── requirements.txt
     │   │   ├── startup.sh
+    │   │   ├── tests/
+    │   │   │   ├── KeysServerTests.ini
+    │   │   │   ├── KeysServerTests.py
+    │   │   │   ├── __init__.py
+    │   │   │   └── requirements.txt
     │   │   └── utils.py
     │   └── oasis_utils/
+    │       ├── LICENSE
     │       ├── README.md
     │       ├── __init__.py
     │       ├── docs/
     │       ├── exceptions.py
     │       ├── oasis_db_utils.py
-    │       ├── oasis_keys_lookup_service_utils.py
     │       ├── oasis_log_utils.py
+    │       ├── oasis_model_runner_utils.py
     │       ├── oasis_sys_utils.py
     │       ├── oasis_utils.py
     │       └── requirements.txt
     └── tests/
-        └── tests.py
+        └── keys_server_tests/
+            └── data/
+                └── OM/
+                    ├── KeysServerTests.ini
+                    └── ModelVersion.csv

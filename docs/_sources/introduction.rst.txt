@@ -102,110 +102,122 @@ for the project name, organization and model name):
     ├── LICENSE
     ├── README.md
     ├── flamingo/
-    │   └── generic_model/
-    │       ├── Files/
-    │       │   ├── MappingFiles/
-    │       │   │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
-    │       │   │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
-    │       │   │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
-    │       │   │   ├── Generic_Flood_SourceLocToCanLoc_A.mfd
-    │       │   │   ├── Generic_SourceAccToCanAcc_A.mfd
-    │       │   │   ├── Generic_Windstorm_CanLoc_BToModelLoc.mfd
-    │       │   │   └── Generic_Windstorm_SourceLocToCanLoc_A.mfd
-    │       │   ├── TransformationFiles/
-    │       │   │   ├── MappingMapToGeneric_CanAcc_A.xslt
-    │       │   │   ├── MappingMapToGeneric_Earthquake_CanLoc_A.xslt
-    │       │   │   ├── MappingMapToGeneric_Earthquake_ModelLoc.xslt
-    │       │   │   ├── MappingMapToGeneric_Flood_CanLoc_A.xslt
-    │       │   │   ├── MappingMapToGeneric_Flood_ModelLoc.xslt
-    │       │   │   ├── MappingMapToGeneric_Windstorm_CanLoc_A.xslt
-    │       │   │   └── MappingMapToGeneric_Windstorm_ModelLoc.xslt
-    │       │   └── ValidationFiles/
-    │       │       ├── Generic_CanAcc_A.xsd
-    │       │       ├── Generic_CanAcc_B.xsd
-    │       │       ├── Generic_Earthquake_CanLoc_A.xsd
-    │       │       ├── Generic_Earthquake_CanLoc_B.xsd
-    │       │       ├── Generic_Earthquake_ModelLoc.xsd
-    │       │       ├── Generic_Earthquake_SourceLoc.xsd
-    │       │       ├── Generic_Flood_CanLoc_A.xsd
-    │       │       ├── Generic_Flood_CanLoc_B.xsd
-    │       │       ├── Generic_Flood_ModelLoc.xsd
-    │       │       ├── Generic_Flood_SourceLoc.xsd
-    │       │       ├── Generic_SourceAcc.xsd
-    │       │       ├── Generic_Windstorm_CanLoc_A.xsd
-    │       │       ├── Generic_Windstorm_CanLoc_B.xsd
-    │       │       ├── Generic_Windstorm_ModelLoc.xsd
-    │       │       └── Generic_Windstorm_SourceLoc.xsd
-    │       └── SQLFiles/
+    │   └── generic_model/
+    │       ├── Files/
+    │       │   ├── MappingFiles/
+    │       │   │   ├── Generic_Earthquake_CanLoc_BToModelLoc.mfd
+    │       │   │   ├── Generic_Earthquake_SourceLocToCanLoc_A.mfd
+    │       │   │   ├── Generic_Flood_CanLoc_BToModelLoc.mfd
+    │       │   │   ├── Generic_Flood_SourceLocToCanLoc_A.mfd
+    │       │   │   ├── Generic_SourceAccToCanAcc_A.mfd
+    │       │   │   ├── Generic_Windstorm_CanLoc_BToModelLoc.mfd
+    │       │   │   └── Generic_Windstorm_SourceLocToCanLoc_A.mfd
+    │       │   ├── TransformationFiles/
+    │       │   │   ├── MappingMapToGeneric_CanAcc_A.xslt
+    │       │   │   ├── MappingMapToGeneric_Earthquake_CanLoc_A.xslt
+    │       │   │   ├── MappingMapToGeneric_Earthquake_ModelLoc.xslt
+    │       │   │   ├── MappingMapToGeneric_Flood_CanLoc_A.xslt
+    │       │   │   ├── MappingMapToGeneric_Flood_ModelLoc.xslt
+    │       │   │   ├── MappingMapToGeneric_Windstorm_CanLoc_A.xslt
+    │       │   │   └── MappingMapToGeneric_Windstorm_ModelLoc.xslt
+    │       │   └── ValidationFiles/
+    │       │       ├── Generic_CanAcc_A.xsd
+    │       │       ├── Generic_CanAcc_B.xsd
+    │       │       ├── Generic_Earthquake_CanLoc_A.xsd
+    │       │       ├── Generic_Earthquake_CanLoc_B.xsd
+    │       │       ├── Generic_Earthquake_ModelLoc.xsd
+    │       │       ├── Generic_Earthquake_SourceLoc.xsd
+    │       │       ├── Generic_Flood_CanLoc_A.xsd
+    │       │       ├── Generic_Flood_CanLoc_B.xsd
+    │       │       ├── Generic_Flood_ModelLoc.xsd
+    │       │       ├── Generic_Flood_SourceLoc.xsd
+    │       │       ├── Generic_SourceAcc.xsd
+    │       │       ├── Generic_Windstorm_CanLoc_A.xsd
+    │       │       ├── Generic_Windstorm_CanLoc_B.xsd
+    │       │       ├── Generic_Windstorm_ModelLoc.xsd
+    │       │       └── Generic_Windstorm_SourceLoc.xsd
+    │       └── SQLFiles/
     ├── keys_data/
-    │   └── OM/
-    │       └── ModelVersion.csv
+    │   └── OM/
+    │       └── ModelVersion.csv
     ├── keys_server_config/
-    │   ├── apache2.conf
-    │   ├── oasis.conf
-    │   └── oasis.wsgi
+    │   ├── apache2.conf
+    │   ├── oasis.conf
+    │   └── oasis.wsgi
     ├── model_data/
-    │   └── OM/
-    │       ├── ModelVersion.csv
-    │       ├── damage_bin_dict.bin
-    │       ├── damage_bin_dict.csv
-    │       ├── data.csv
-    │       ├── events.bin
-    │       ├── events.csv
-    │       ├── footprint.bin
-    │       ├── footprint.csv
-    │       ├── footprint.idx
-    │       ├── occurrence.bin
-    │       ├── occurrence.csv
-    │       ├── random.bin
-    │       ├── random.csv
-    │       ├── returnperiods.bin
-    │       ├── returnperiods.csv
-    │       ├── vulnerability.bin
-    │       └── vulnerability.csv
+    │   └── OM/
+    │       ├── ModelVersion.csv
+    │       ├── damage_bin_dict.bin
+    │       ├── damage_bin_dict.csv
+    │       ├── data.csv
+    │       ├── events.bin
+    │       ├── events.csv
+    │       ├── footprint.bin
+    │       ├── footprint.csv
+    │       ├── footprint.idx
+    │       ├── occurrence.bin
+    │       ├── occurrence.csv
+    │       ├── random.bin
+    │       ├── random.csv
+    │       ├── returnperiods.bin
+    │       ├── returnperiods.csv
+    │       ├── vulnerability.bin
+    │       └── vulnerability.csv
     ├── oasis_build_utils/
-    │   └── keys_server_build_utils.sh
+    │   └── keys_server_build_utils.sh
     ├── oasislmf_om_keys_server_build_config
     ├── src/
-    │   ├── keys_server/
-    │   │   ├── KeysServer.ini
-    │   │   ├── OM/
-    │   │   │   ├── OMKeysLookup.py
-    │   │   │   ├── __init__.py
-    │   │   │   ├── requirements.txt
-    │   │   │   └── utils.py
-    │   │   ├── OasisBaseKeysLookup.py/
-    │   │   ├── __init__.py
-    │   │   ├── __init__.py.base
-    │   │   ├── requirements.txt
-    │   │   └── utils.py
-    │   ├── model_execution_worker/
-    │   │   └── OM/
-    │   │       ├── __init__.py
-    │   │       └── supplier_model_runner.py
-    │   ├── oasis_keys_server/
-    │   │   ├── KeysServer.ini
-    │   │   ├── README.md
-    │   │   ├── __init__.py
-    │   │   ├── app.py
-    │   │   ├── docs/
-    │   │   ├── oasis_keys_lookup/
-    │   │   │   ├── OasisBaseKeysLookup.py
-    │   │   │   └── __init__.py
-    │   │   ├── requirements.txt
-    │   │   ├── startup.sh
-    │   │   └── utils.py
-    │   └── oasis_utils/
-    │       ├── README.md
-    │       ├── __init__.py
-    │       ├── docs/
-    │       ├── exceptions.py
-    │       ├── oasis_db_utils.py
-    │       ├── oasis_keys_lookup_service_utils.py
-    │       ├── oasis_log_utils.py
-    │       ├── oasis_sys_utils.py
-    │       ├── oasis_utils.py
-    │       └── requirements.txt
+    │   ├── keys_server/
+    │   │   ├── OM/
+    │   │   │   ├── KeysServer.ini
+    │   │   │   ├── OMKeysLookup.py
+    │   │   │   ├── __init__.py
+    │   │   │   ├── requirements.txt
+    │   │   │   └── utils.py
+    │   │   ├── OasisBaseKeysLookup.py
+    │   │   ├── __init__.py
+    │   │   ├── __init__.py.base
+    │   │   ├── requirements.txt
+    │   │   └── utils.py
+    │   ├── model_execution_worker/
+    │   │   └── OM/
+    │   │       ├── __init__.py
+    │   │       └── supplier_model_runner.py
+    │   ├── oasis_keys_server/
+    │   │   ├── KeysServer.ini
+    │   │   ├── LICENSE
+    │   │   ├── README.md
+    │   │   ├── __init__.py
+    │   │   ├── app.py
+    │   │   ├── docs/
+    │   │   ├── oasis_keys_lookup/
+    │   │   │   ├── OasisBaseKeysLookup.py
+    │   │   │   └── __init__.py
+    │   │   ├── requirements.txt
+    │   │   ├── startup.sh
+    │   │   ├── tests/
+    │   │   │   ├── KeysServerTests.ini
+    │   │   │   ├── KeysServerTests.py
+    │   │   │   ├── __init__.py
+    │   │   │   └── requirements.txt
+    │   │   └── utils.py
+    │   └── oasis_utils/
+    │       ├── LICENSE
+    │       ├── README.md
+    │       ├── __init__.py
+    │       ├── docs/
+    │       ├── exceptions.py
+    │       ├── oasis_db_utils.py
+    │       ├── oasis_log_utils.py
+    │       ├── oasis_model_runner_utils.py
+    │       ├── oasis_sys_utils.py
+    │       ├── oasis_utils.py
+    │       └── requirements.txt
     └── tests/
-        └── tests.py
+        └── keys_server_tests/
+            └── data/
+                └── OM/
+                    ├── KeysServerTests.ini
+                    └── ModelVersion.csv
+
     
