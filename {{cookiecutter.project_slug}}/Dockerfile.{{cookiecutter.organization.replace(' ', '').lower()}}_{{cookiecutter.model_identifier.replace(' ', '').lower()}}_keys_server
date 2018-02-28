@@ -49,7 +49,6 @@ RUN mkdir /var/oasis/keys_data
 RUN chown www-data:www-data /var/oasis/keys_data
 RUN chmod -R 744 /var/oasis/keys_data
 COPY ./keys_data/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/ /var/oasis/keys_data/
-RUN chmod -R 444 /var/oasis/keys_data
 
 COPY ./src/oasis_keys_server/startup.sh  /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup.sh

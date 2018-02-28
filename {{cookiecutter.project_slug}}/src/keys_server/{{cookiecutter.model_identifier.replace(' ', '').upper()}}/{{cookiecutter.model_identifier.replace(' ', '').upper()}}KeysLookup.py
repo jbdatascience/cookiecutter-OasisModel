@@ -22,7 +22,7 @@ from oasis_utils import (
 )
 
 # Model keys server imports
-from .utils import *
+from utils import *
 
 class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(OasisBaseKeysLookup):
     """
