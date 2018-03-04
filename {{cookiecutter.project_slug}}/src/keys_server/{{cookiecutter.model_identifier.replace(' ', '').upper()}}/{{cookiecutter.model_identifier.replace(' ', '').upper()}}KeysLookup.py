@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 __all__ = [
   '{{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup'
 ]  # This should be a list of all public methods and attributes that can be imported from this
@@ -14,12 +16,8 @@ import os
 
 # Oasis utils and other Oasis imports
 
-from keys_server import OasisBaseKeysLookup
-
-from oasis_utils import (
-    oasis_utils,
-    oasis_log_utils,
-)
+from oasislmf.keys.lookup import OasisBaseKeysLookup
+from oasislmf.utils.log import oasis_log
 
 # Model keys server imports
 from utils import *
@@ -29,8 +27,8 @@ class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(Oasis
     Model-specific keys lookup logic.
     """
 
-    @oasis_log_utils.oasis_log()
-    def __init__(self, keys_data_directory, supplier, model_name, model_version):
+    @oasis_log()
+    def __init__(self, keys_data_directory=None, supplier={{cookiecutter.organization.replace(' ', '')}}, model_name={{cookiecutter.model_identifier.replace(' ', '').upper()}}, model_version=None):
         """
         Initialise the static data required for the lookup.
         """
@@ -43,7 +41,7 @@ class {{cookiecutter.model_identifier.replace(' ', '').upper()}}KeysLookup(Oasis
         pass
     
     
-    @oasis_log_utils.oasis_log()
+    @oasis_log()
     def process_locations(self, loc_df):
         """
         Process location rows - passed in as a pandas dataframe.

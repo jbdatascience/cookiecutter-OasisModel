@@ -9,7 +9,6 @@ from subprocess import (
 )
 
 OASIS_GIT_SUBMODULES = {
-    'oasis_utils': 'git+ssh://git@github.com/OasisLMF/oasis_utils',
     'oasis_keys_server': 'git+ssh://git@github.com/OasisLMF/oasis_keys_server',
     'oasis_build_utils': 'git+ssh://git@github.com/OasisLMF/oasis_build_utils'
 
