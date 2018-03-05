@@ -83,6 +83,8 @@ The `./src/oasis_keys_server` submodule contains a set of Python test cases whic
 
     MODEL_VERSION_FILE_PATH=/path/to/your/{{cookiecutter.organization.replace(' ', '')}}/tests/keys_server_tests/data/<model ID>/ModelVersion.csv
 
+    KEYS_DATA_PATH=/path/to/model/lookup/keys/data
+
     SAMPLE_CSV_MODEL_EXPOSURES_FILE_PATH=/path/to/your/{{cookiecutter.organization.replace(' ', '')}}/tests/keys_server_tests/data/<model ID>/<model loc. test CSV file>
 
     SAMPLE_JSON_MODEL_EXPOSURES_FILE_PATH=/path/to/your/{{cookiecutter.organization.replace(' ', '')}}/tests/keys_server_tests/data/<model ID>/<model loc. test JSON file>
@@ -91,7 +93,7 @@ The `./src/oasis_keys_server` submodule contains a set of Python test cases whic
 
     KEYS_SERVER_PORT=5000
 
-Make sure the paths exist and the server hostname/IP and port are correct. Then copy the INI file (`./tests/keys_server_tests/data/<model ID>/KeysServerTests.ini`) to `./src/oasis_keys_server/tests` and then run
+Make sure the paths exist and the server hostname/IP and port are correct. Then copy the INI file for the model (`./tests/keys_server_tests/data/<model ID>/KeysServerTests.ini`) to `./src/oasis_keys_server/tests` and then run
 
     python -m unittest -v KeysServerTests
 
