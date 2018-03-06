@@ -174,7 +174,6 @@ for the project name, organization and model name):
     │   │   │   ├── __init__.py
     │   │   │   ├── requirements.txt
     │   │   │   └── utils.py
-    │   │   ├── OasisBaseKeysLookup.py
     │   │   ├── __init__.py
     │   │   ├── __init__.py.base
     │   │   ├── requirements.txt
@@ -183,41 +182,24 @@ for the project name, organization and model name):
     │   │   └── OM/
     │   │       ├── __init__.py
     │   │       └── supplier_model_runner.py
-    │   ├── oasis_keys_server/
-    │   │   ├── KeysServer.ini
-    │   │   ├── LICENSE
-    │   │   ├── README.md
-    │   │   ├── __init__.py
-    │   │   ├── app.py
-    │   │   ├── docs/
-    │   │   ├── oasis_keys_lookup/
-    │   │   │   ├── OasisBaseKeysLookup.py
-    │   │   │   └── __init__.py
-    │   │   ├── requirements.txt
-    │   │   ├── startup.sh
-    │   │   ├── tests/
-    │   │   │   ├── KeysServerTests.ini
-    │   │   │   ├── KeysServerTests.py
-    │   │   │   ├── __init__.py
-    │   │   │   └── requirements.txt
-    │   │   └── utils.py
-    │   └── oasis_utils/
+    │   └── oasis_keys_server/
+    │       ├── KeysServer.ini
     │       ├── LICENSE
     │       ├── README.md
     │       ├── __init__.py
+    │       ├── app.py
     │       ├── docs/
-    │       ├── exceptions.py
-    │       ├── oasis_db_utils.py
-    │       ├── oasis_log_utils.py
-    │       ├── oasis_model_runner_utils.py
-    │       ├── oasis_sys_utils.py
-    │       ├── oasis_utils.py
-    │       └── requirements.txt
+    │       ├── requirements.txt
+    │       ├── startup.sh
+    │       ├── tests/
+    │       │   ├── KeysServerTests.ini
+    │       │   ├── KeysServerTests.py
+    │       │   ├── __init__.py
+    │       │   └── requirements.txt
+    │       └── utils.py
     └── tests/
         └── keys_server_tests/
             └── data/
                 └── OM/
                     ├── KeysServerTests.ini
                     └── ModelVersion.csv
-
-    
