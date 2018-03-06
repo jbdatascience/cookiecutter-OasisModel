@@ -40,12 +40,6 @@ def commit_git_submodules():
     check_call(['git', 'commit', '-m', 'Commit for Git submodules'])
 
 
-def add_static_base_lookup_module_to_keys_server_subpackage():
-    check_call(['cp', os.path.join('src', 'oasis_keys_server', 'oasis_keys_lookup', 'OasisBaseKeysLookup.py'), os.path.join('src', 'keys_server')])
-    check_call(['git', 'add', 'src'])
-    check_call(['git', 'commit', '-m', '"Add Oasis base lookup class to keys server subpackage"'])
-
-
 if __name__ == '__main__':
     cwd = os.getcwd()
 
@@ -66,7 +60,3 @@ if __name__ == '__main__':
     print('\nCommitting Git submodules.\n')
     time.sleep(2)
     commit_git_submodules()
-
-    print('\nAdding Oasis base lookup class to keys server subpackage.\n')
-    time.sleep(2)
-    add_static_base_lookup_module_to_keys_server_subpackage()
