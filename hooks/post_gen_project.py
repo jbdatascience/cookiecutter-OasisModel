@@ -8,7 +8,7 @@ from subprocess import (
     check_output,
 )
 
-OASIS_GIT_SUBMODULES = {
+SUBMODULES = {
     'oasis_keys_server': 'git+ssh://git@github.com/OasisLMF/oasis_keys_server',
     'oasis_build_utils': 'git+ssh://git@github.com/OasisLMF/oasis_build_utils'
 
@@ -26,7 +26,7 @@ def create_git_repo():
 
 
 def add_git_submodules():
-    for name, url in OASIS_GIT_SUBMODULES.items():
+    for name, url in SUBMODULES.items():
         check_call(
             [
                 'git', 'submodule', 'add', '-f', url, os.path.join('src', name) if name != 'oasis_build_utils' else name,
