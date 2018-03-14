@@ -1,25 +1,13 @@
-FROM ubuntu:16.04
+FROM coreoasis/oasis_base:latest
 
-RUN apt update && apt upgrade -y && apt install -y apache2 \
-                       apache2-utils \
-                       libapache2-mod-wsgi \
-                       python-pip \
-                       python-dev \
-                       build-essential \
-                       python-flask \
-                       libgeos-dev \
-                       unixodbc \
-                       unixodbc-dev
-
-RUN mkdir /var/www/oasis
-RUN mkdir /var/oasis
-
-RUN mkdir /var/log/oasis
-RUN chown www-data:www-data /var/log/oasis
-RUN chmod 744 /var/log/oasis
-RUN touch /var/log/oasis/keys_server.log
-RUN chown www-data:www-data /var/log/oasis/keys_server.log
-RUN chmod 644 /var/log/oasis/keys_server.log
+RUN mkdir /var/www/oasis && \
+    mkdir /var/oasis && \
+    mkdir /var/log/oasis && \
+    chown www-data:www-data /var/log/oasis && \
+    chmod 744 /var/log/oasis && \
+    touch /var/log/oasis/keys_server.log && \
+    chown www-data:www-data /var/log/oasis/keys_server.log && \
+    chmod 644 /var/log/oasis/keys_server.log
 
 COPY ./keys_server_config/apache2.conf /etc/apache2/
 COPY ./keys_server_config/oasis.conf /etc/apache2/sites-available/
@@ -27,8 +15,8 @@ COPY ./keys_server_config/oasis.wsgi /var/www/oasis/
 
 RUN mkdir /var/www/oasis/oasis_keys_server
 COPY ./src/oasis_keys_server/ /var/www/oasis/oasis_keys_server/
-RUN rm -fr /var/www/oasis/oasis_keys_server/docs
-RUN rm -fr /var/www/oasis/oasis_keys_server/venv
+RUN rm -fr /var/www/oasis/oasis_keys_server/docs && \
+    rm -fr /var/www/oasis/oasis_keys_server/venv
 
 RUN mkdir /var/www/oasis/keys_server
 COPY ./src/keys_server/__init__.py.base /var/www/oasis/keys_server/__init__.py
@@ -39,20 +27,20 @@ RUN mkdir /var/www/oasis/keys_server/{{cookiecutter.model_identifier.replace(' '
 COPY ./src/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/ /var/www/oasis/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/
 COPY ./src/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/KeysServer.ini /var/www/oasis/oasis_keys_server/
 
-RUN mkdir /var/oasis/keys_data
-RUN chown www-data:www-data /var/oasis/keys_data
-RUN chmod -R 744 /var/oasis/keys_data
+RUN mkdir /var/oasis/keys_data && \
+    chown www-data:www-data /var/oasis/keys_data && \
+    chmod -R 744 /var/oasis/keys_data
 COPY ./keys_data/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/ /var/oasis/keys_data/
 
 COPY ./src/oasis_keys_server/startup.sh  /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup.sh
 
-RUN pip install -r /var/www/oasis/oasis_keys_server/requirements.txt
-RUN pip install -r /var/www/oasis/keys_server/requirements.txt
-RUN pip install -r /var/www/oasis/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/requirements.txt
+RUN pip install -r /var/www/oasis/oasis_keys_server/requirements.txt && \
+    pip install -r /var/www/oasis/keys_server/requirements.txt && \
+    pip install -r /var/www/oasis/keys_server/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/requirements.txt
 
-RUN a2dissite 000-default
-RUN a2ensite oasis.conf
+RUN a2dissite 000-default && \
+    a2ensite oasis.conf
 EXPOSE 5000
 
 ENTRYPOINT startup.sh; tail -f /var/log/oasis/keys_server.log
