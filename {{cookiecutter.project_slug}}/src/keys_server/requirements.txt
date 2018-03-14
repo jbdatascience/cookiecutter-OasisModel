@@ -1,2 +1,2 @@
-oasislmf==0.0.9
+oasislmf==1.0.0
 pandas==0.19.2
