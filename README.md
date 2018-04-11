@@ -119,9 +119,21 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │       ├── returnperiods.csv
     │       ├── vulnerability.bin
     │       └── vulnerability.csv
-    ├── oasis_build_utils/
-    │   └── keys_server_build_utils.sh
-    ├── oasislmf_om_keys_server_build_config
+    ├── oasis_keys_server/
+    │   ├── KeysServer.ini
+    │   ├── LICENSE
+    │   ├── README.md
+    │   ├── __init__.py
+    │   ├── app.py
+    │   ├── docs/
+    │   ├── requirements.txt
+    │   ├── startup.sh
+    │   ├── tests/
+    │   │   ├── KeysServerTests.ini
+    │   │   ├── KeysServerTests.py
+    │   │   ├── __init__.py
+    │   │   └── requirements.txt
+    │   └── utils.py
     ├── src/
     │   ├── keys_server/
     │   │   ├── OM/
@@ -134,25 +146,10 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   │   ├── __init__.py.base
     │   │   ├── requirements.txt
     │   │   └── utils.py
-    │   ├── model_execution_worker/
-    │   │   └── OM/
-    │   │       ├── __init__.py
-    │   │       └── supplier_model_runner.py
-    │   └── oasis_keys_server/
-    │       ├── KeysServer.ini
-    │       ├── LICENSE
-    │       ├── README.md
-    │       ├── __init__.py
-    │       ├── app.py
-    │       ├── docs/
-    │       ├── requirements.txt
-    │       ├── startup.sh
-    │       ├── tests/
-    │       │   ├── KeysServerTests.ini
-    │       │   ├── KeysServerTests.py
-    │       │   ├── __init__.py
-    │       │   └── requirements.txt
-    │       └── utils.py
+    │   └── model_execution_worker/
+    │       └── OM/
+    │           ├── __init__.py
+    │           └── supplier_model_runner.py
     └── tests/
         └── keys_server_tests/
             └── data/
