@@ -11,6 +11,8 @@ To clone over HTTPS use
 
     git clone --recursive https://github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}
 
+The `--recursive` option ensures the cloned repository contains the <a href="https://github.com/OasisLMF/oasis_keys_server" target="_blank">`oasis_keys_server`</a> submodule. You have read only access to this submodule.
+
 ## Managing the submodules
 
 There are three submodules - `src/oasis_keys_server` which contains the Flask app that handles the keys requests dispatched to the model lookup services, `src/oasis_utils` which contains various Python utilities used by the Flask app and also the model lookup services, and `oasis_build_utils`, which contains a Bash script and utilities for building keys server Docker images and running them in Docker containers.
@@ -37,27 +39,11 @@ You can also update the submodules individually by pulling from within them.
 
 You should not make any local changes to these submodules because you have read-only access to these submodules on GitHub and you will not be able push your changes to GitHub. So submodule changes can only propagate from GitHub to your local repository. To detect these changes you can run `git status -uno` and to commit them you can add the paths and commit them in the normal way.
 
-## Building and running the keys server
+## Building and running a keys server
 
 First, ensure that you have Docker installed on your system and that your Unix user has been added to the `docker` user group (run `sudo usermod -a -G docker $USER`).
 
-There are two ways of building and running the keys server - either using a built-in shell script in the <a href="https://github.com/OasisLMF/oasis_build_utils" target="_blank">`oasis_build_utils`</a> submodule provided by Oasis or directly using Docker.
-
-To use the shell script first load the build configuration file for the keys server (from the base of the repository) by running
-
-    . oasis_build_utils/keys_server_build_utils.sh <keys server build config file name>
-
-This loads build parameters needed by the script, such as the supplier, model name, version, path to the keys data files etc. - if there are errors or missing parameters please change the build config file and run the same command again. Every model should have its own build configuration file with the following name format (all lowercase)
-
-    <supplier ID>_<model ID>_keys_server_build_config
-
-Then run
-
-    start_keys_server
-
-This will build the keys server image (calls the function `build_image`), run the image in a container (`run_container`) and run a healthcheck (`healthcheck`). If you want to do these steps separately call the relevant functions separately.
-
-If you prefer to use Docker directly to build the image then you can run the following command (from the base of the repository)
+To build a keys server run the command
 
     sudo docker build -f <docker file name> -t <image name/tag> .
 
@@ -67,7 +53,7 @@ Run `docker images` to list all images and check the one you've built exists. To
 
 To check the container is running use the command `docker ps`. If you want to run the healthcheck on the keys server then use the command
 
-    curl -s http://<server or localhost>:5000/{{cookiecutter.organization.replace(' ', '')}}/{{cookiecutter.model_identifier.replace(' ', '').upper()}}/{{cookiecutter.model_version}}/healthcheck
+    curl -s http://<server or localhost>:5000/{{cookiecutter.organization.replace(' ', '')}}/<model ID>/<model version>/healthcheck
 
 You should get a response of `OK` if the keys server has initialised and is running normally, otherwise you should get the HTML error response from Apache. To enter the running container you can use the command
 

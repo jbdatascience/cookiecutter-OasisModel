@@ -97,3 +97,5 @@ python_boilerplate/
 
 # Virtualenv
 venv/
+
+oasis_build_utils
