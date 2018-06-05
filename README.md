@@ -1,21 +1,9 @@
+<img src="https://oasislmf.org/packages/oasis_theme_package/themes/oasis_theme/assets/src/oasis-lmf-colour.png" alt="Oasis LMF logo" width="250"/>
+
 cookiecutter-OasisModel
 =======================
 
 A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>.
-
-## Cloning the repository
-
-You can clone this repository from GitHub if you are a member of the Oasis development team on GitHub or have write access to the GitHub repository via another OasisLMF organizational team. You can clone over HTTPS or SSH, but it is recommended that that you use SSH: first ensure that you have generated an SSH key pair on your local machine and add the public key of that pair to your GitHub account (use the GitHub guide at https://help.github.com/articles/connecting-to-github-with-ssh/). Then run
-
-    git clone git+ssh://git@github.com/OasisLMF/cookiecutter-OasisModel
-
-To clone over HTTPS use
-
-    git clone https://github.com/OasisLMF/cookiecutter-OasisModel
-
-You may receive a password prompt - to bypass the password prompt use
-
-    git clone https://<GitHub user name:GitHub password>@github.com/OasisLMF/cookiecutter-OasisModel
 
 ## First steps
 
@@ -156,3 +144,11 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
                 └── OM/
                     ├── KeysServerTests.ini
                     └── ModelVersion.csv
+                    
+
+## Documentation
+* <a href="https://oasislmf.github.io">General Oasis documentation</a>
+* <a href="https://oasislmf.github.io/docs/oasis_mdk.html">Oasis MDK documentation</a>
+
+## License
+The code in this project is licensed under BSD 3-clause license.
