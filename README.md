@@ -3,7 +3,7 @@
 cookiecutter-OasisModel
 =======================
 
-A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter` Python tool</a>.
+A cookiecutter project structure for Oasis models that can be replicated using the <a href="https://pypi.python.org/pypi/cookiecutter" target="_blank">`cookiecutter`</a> Python tool.
 
 ## First steps
 
