@@ -6,13 +6,10 @@ __all__ = [
    # module elsewhere. This list should contain the class names of all the model-specific keys
    # keys lookup classes defined here.
 
-# Python 2 standard library imports
-import csv
-import io
-import logging
-import os
+# Python standard library imports
 
-# Python 2 non-standard library imports
+# Python non-standard library imports
+import pandas as pd
 
 # Oasis utils and other Oasis imports
 
