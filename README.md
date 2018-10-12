@@ -112,16 +112,28 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
     │   ├── LICENSE
     │   ├── README.md
     │   ├── __init__.py
-    │   ├── app.py
+    │   ├── __init__.py.base
+    │   ├── apache_config/
+    │   │   ├── apache2.conf
+    │   │   ├── oasis.conf
+    │   │   └── oasis.wsgi
+    │   ├── builtin/
+    │   │   ├── __init__.py
+    │   │   └── app.py
+    │   ├── custom/
+    │   │   ├── __init__.py
+    │   │   └── app.py
+    │   ├── docker/
+    │   │   ├── Dockerfile.builtin_keys_server
+    │   │   └── Dockerfile.custom_keys_server
     │   ├── docs/
     │   ├── requirements.txt
     │   ├── startup.sh
-    │   ├── tests/
-    │   │   ├── KeysServerTests.ini
-    │   │   ├── KeysServerTests.py
-    │   │   ├── __init__.py
-    │   │   └── requirements.txt
-    │   └── utils.py
+    │   └── tests/
+    │       ├── KeysServerTests.ini
+    │       ├── KeysServerTests.py
+    │       ├── __init__.py
+    │       └── requirements.txt
     ├── src/
     │   ├── keys_server/
     │   │   ├── OM/
@@ -144,7 +156,6 @@ For the current state of the <a href="https://github.com/OasisLMF/cookiecutter-O
                 └── OM/
                     ├── KeysServerTests.ini
                     └── ModelVersion.csv
-                    
 
 ## Documentation
 * <a href="https://oasislmf.github.io">General Oasis documentation</a>

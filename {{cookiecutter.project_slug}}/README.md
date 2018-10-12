@@ -1,21 +1,19 @@
-{{cookiecutter.organization}} {{cookiecutter.model_identifier.upper()}} Model README
-====================================================================================
+{{cookiecutter.organization.replace(' ', '')}} Keys Server ({{cookiecutter.model_identifier.replace(' ', '').upper()}})
+======================================================================================================
 
 ## Cloning the repository
 
-You can clone this repository using HTTPS or SSH, but it is recommended that that you use SSH: first ensure that you have generated an SSH key pair on your local machine and add the public key of that pair to your GitHub account (use the GitHub guide at https://help.github.com/articles/connecting-to-github-with-ssh/). Then run
+You can clone this repository from <a href="https://github.com/OasisLMF/Catrisks" target="_blank">GitHub</a> using HTTPS or SSH. Before doing this you must generate an SSH key pair on your local machine and add the public key of that pair to your GitHub account (use the GitHub guide at <a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank">https://help.github.com/articles/connecting-to-github-with-ssh/</a>). To clone over SSH use
 
-    git clone --recursive git+ssh://git@github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}
+    git clone --recursive git+ssh://git@github.com/OasisLMF/{{cookiecutter.organization.replace(' ', '')}}
 
 To clone over HTTPS use
 
-    git clone --recursive https://github.com/OasisLMF/{{cookiecutter.project_slug.replace(' ', '')}}
+    git clone --recursive https://<GitHub user name:GitHub password>@github.com/OasisLMF/{{cookiecutter.organization.replace(' ', '')}}
 
 The `--recursive` option ensures the cloned repository contains the <a href="https://github.com/OasisLMF/oasis_keys_server" target="_blank">`oasis_keys_server`</a> submodule. You have read only access to this submodule.
 
 ## Managing the submodules
-
-There are three submodules - `src/oasis_keys_server` which contains the Flask app that handles the keys requests dispatched to the model lookup services, `src/oasis_utils` which contains various Python utilities used by the Flask app and also the model lookup services, and `oasis_build_utils`, which contains a Bash script and utilities for building keys server Docker images and running them in Docker containers.
 
 Run the command
 
@@ -23,11 +21,7 @@ Run the command
 
 to list the submodules (latest commit IDs, paths and branches). If any are missing then you can add them using
 
-	git submodule add <submodule GitHub repo URL> <local path/destination>
-
-It is a quirk of Git that the first time you clone a repository with submodules they will be checked out as commits not branches, which is not what you want. You should run the command
-
-    git submodule foreach 'git checkout master'
+    git submodule add <submodule GitHub repo URL> <local path/destination>
 
 to ensure that the Oasis submodules are checked out on the `master` branches.
 
@@ -37,7 +31,7 @@ If you've already cloned the repository and wish to update the submodules (all a
 
 You can also update the submodules individually by pulling from within them.
 
-You should not make any local changes to these submodules because you have read-only access to these submodules on GitHub and you will not be able push your changes to GitHub. So submodule changes can only propagate from GitHub to your local repository. To detect these changes you can run `git status -uno` and to commit them you can add the paths and commit them in the normal way.
+You should not make any local changes to these submodules because you have read-only access to their GitHub repositories. So submodule changes can only propagate from GitHub to your local repository. To detect these changes you can run `git status -uno` and to commit them you can add the paths and commit them in the normal way.
 
 ## Building and running a keys server
 
@@ -63,7 +57,7 @@ The log files to check are `/var/log/apache/error.log` (Apache error log), `/var
 
 ## Testing the keys server
 
-The `./src/oasis_keys_server` submodule contains a set of Python test cases which you can run against a locally running keys server for a defined model. The tests require configuration information which can be found in an INI file `KeysServerTests.ini` located in `./tests/keys_server_tests/data/<model ID>`. If this subfolder and file does not exist then you will have to create it. The file should define some files and keys server properties needed to run the tests.
+The `./src/oasis_keys_server` submodule contains a set of Python test cases which you can run against a running keys server for a defined model. The tests require configuration information which can be found in an INI file `KeysServerTests.ini` located in `./tests/keys_server_tests/data/<model ID>`. If this subfolder and file does not exist then you will have to create it. The file should define some files and keys server properties needed to run the tests.
 
     [Default]
 

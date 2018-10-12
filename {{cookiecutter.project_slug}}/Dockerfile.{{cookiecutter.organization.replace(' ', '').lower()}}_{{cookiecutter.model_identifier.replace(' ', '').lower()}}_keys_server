@@ -1,4 +1,4 @@
-FROM coreoasis/model_keys_server:latest
+FROM coreoasis/custom_keys_server:latest
 
 RUN mkdir /var/www/oasis/keys_server
 COPY ./src/keys_server/__init__.py.base /var/www/oasis/keys_server/__init__.py
